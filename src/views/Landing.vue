@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <LandingBanner class="mb-5"></LandingBanner>
-    <TeamCompositionTool></TeamCompositionTool>
+    <TeamCompositionBuilder></TeamCompositionBuilder>
   </div>
 </template>
 <script>
 import LandingBanner from "../components/LandingBanner.vue";
-import TeamCompositionTool from "../components/TeamCompositionTool";
+import TeamCompositionBuilder from "../components/TeamCompositionBuilder";
 export default {
   components: {
     LandingBanner,
-    TeamCompositionTool
+    TeamCompositionBuilder
   }
 };
 </script>

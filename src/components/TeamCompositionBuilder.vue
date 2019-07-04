@@ -9,7 +9,9 @@
         >
           <b-input-group>
             <b-form-input
-              @keyup.enter="addChampionToSelectedChampions(championNameFromInput)"
+              @keyup.enter="
+                addChampionToSelectedChampions(championNameFromInput)
+              "
               v-model="championNameFromInput"
               placeholder="Enter a champion name"
             >
@@ -28,7 +30,10 @@
 
     <b-row>
       <b-col md="8" offset="2">
-          <p v-if="selectedChampions.length !== 0" class="text-white text-muted">Click champion portraits to remove them from your composition<p/>
+        <p v-if="selectedChampions.length !== 0" class="text-white text-muted">
+          Click champion portraits to remove them from your composition
+        </p>
+        <p />
         <div class="selected-champions-display text-white mx-auto mb-3">
           <div
             v-for="championName in selectedChampions"
@@ -44,33 +49,22 @@
         </div>
       </b-col>
     </b-row>
-    <b-row>
-      <b-col md="8" offset="2">
-        <b-table
-          stacked="md"
-          show-empty
-          empty-text="No team comps found using given champion(s)"
-          :items="getTeamCompositionsToRender"
-          :fields="teamCompositionsToRenderFields"
-          class="text-white"
-        >
-        </b-table>
-      </b-col>
-    </b-row>
+    <TeamCompositionsTable
+      :teamCompositionsToRender="getTeamCompositionsToRender"
+    ></TeamCompositionsTable>
   </div>
 </template>
 
 <script>
 import db from "../firebaseConfig";
+import TeamCompositionsTable from "./TeamCompositionsTable";
 
 export default {
   data() {
     return {
-      availableChampions: [],
       selectedChampions: [],
       availableTeamCompositions: [],
-      championNameFromInput: "",
-      teamCompositionsToRenderFields: []
+      championNameFromInput: ""
     };
   },
 
@@ -80,6 +74,10 @@ export default {
         return this.shouldTeamCompositionBeRendered(teamComposition);
       });
     }
+  },
+
+  components: {
+    TeamCompositionsTable
   },
 
   methods: {
@@ -109,9 +107,11 @@ export default {
     },
 
     removeChampionFromSelectedChampions(championName) {
-        this.selectedChampions = this.selectedChampions.filter(selectedChampion => {
-          return selectedChampion !== championName
-        })
+      this.selectedChampions = this.selectedChampions.filter(
+        selectedChampion => {
+          return selectedChampion !== championName;
+        }
+      );
     },
 
     getChampionThumbnailImage(championName) {
@@ -126,16 +126,6 @@ export default {
   },
 
   created() {
-    db.collection("champions")
-      .get()
-      .then(championsQuerySnapshot => {
-        championsQuerySnapshot.forEach(championDoc => {
-          const champion = championDoc.data();
-          champion.name = championDoc.id;
-          this.availableChampions.push(champion);
-        });
-      });
-
     db.collection("compositions")
       .get()
       .then(teamCompositionsQuerySnapshot => {
