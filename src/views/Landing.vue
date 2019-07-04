@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <LandingBanner></LandingBanner>
+    <LandingBanner class="mb-5"></LandingBanner>
     <TeamCompositionTool></TeamCompositionTool>
   </div>
 </template>

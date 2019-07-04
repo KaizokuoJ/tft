@@ -13,20 +13,49 @@
                 addChampionToSelectedChampionList(championFromInput)
               "
               v-model="championFromInput"
-              placeholder="Enter a champion"
-            ></b-form-input>
+              placeholder="Enter a champion name"
+            >
+            </b-form-input>
             <b-input-group-append>
               <b-button
                 :disabled="!championFromInput"
                 @click="addChampionToSelectedChampionList(championFromInput)"
-                >Add Champion</b-button
-              >
+                >Add
+              </b-button>
             </b-input-group-append>
           </b-input-group>
         </b-form-group>
       </b-col>
     </b-row>
-    
+
+    <b-row>
+      <b-col md="8" offset="2">
+        <div class="selected-champions-display text-white mx-auto mb-3">
+          <div
+            v-for="championName in selectedChampions"
+            class="selected-champion-thumbnail-image-container selected-champion-thumbnail"
+          >
+            <img
+              :src="getChampionThumbnailImage(championName)"
+              alt="Image of a champion that was entered in the input field"
+              class="selected-champion-thumbnail-image selected-champion-thumbnail"
+            />
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col md="8" offset="2">
+        <b-table
+          stacked="md"
+          show-empty
+          :items="getTeamCompositionsToRender"
+          :fields="teamCompositionsToRenderFields"
+          class="text-white"
+        >
+        </b-table>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -36,30 +65,56 @@ import db from "../firebaseConfig";
 export default {
   data() {
     return {
-      filter: null,
       availableChampions: [],
       selectedChampions: [],
       availableTeamCompositions: [],
-      championFromInput: ""
+      championFromInput: "",
+      teamCompositionsToRenderFields: []
     };
   },
 
   computed: {
-    getDisplayedTeamCompositions () {
+    getTeamCompositionsToRender() {
       return this.availableTeamCompositions.filter(teamComposition => {
-        let displayTeamComposition = false;
-        this.selectedChampions.forEach(selectedChampion => {
-          teamComposition.champions.includes(selectedChampion) ? displayTeamComposition = true : displayTeamComposition = false;
-        });
-        return displayTeamComposition
+        return this.shouldTeamCompositionBeRendered(teamComposition);
       });
     }
   },
 
   methods: {
+    shouldTeamCompositionBeRendered(teamComposition) {
+      let teamCompositionShouldBeRendered = false;
+      for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
+        const selectedChampion = this.selectedChampions[i];
+        teamCompositionShouldBeRendered = this.doesTeamCompositionIncludeSelectedChampion(
+          teamComposition,
+          selectedChampion
+        );
+        if (!teamCompositionShouldBeRendered) return false;
+      }
+      return teamCompositionShouldBeRendered;
+    },
+
+    doesTeamCompositionIncludeSelectedChampion(
+      teamComposition,
+      selectedChampion
+    ) {
+      return teamComposition.champions.includes(selectedChampion);
+    },
+
     addChampionToSelectedChampionList(champion) {
       this.championFromInput = "";
       this.selectedChampions.push(champion);
+    },
+
+    getChampionThumbnailImage(championName) {
+      return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
+        championName
+      )}.png`);
+    },
+
+    capitalizeFirstLetter: string => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     }
   },
 
@@ -73,6 +128,7 @@ export default {
           this.availableChampions.push(champion);
         });
       });
+
     db.collection("compositions")
       .get()
       .then(teamCompositionsQuerySnapshot => {
@@ -84,4 +140,36 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.selected-champion-thumbnail {
+  -webkit-clip-path: polygon(
+    50% 6%,
+    89% 24%,
+    89% 76%,
+    50% 94%,
+    11% 74%,
+    11% 26%
+  );
+  clip-path: polygon(50% 6%, 89% 24%, 89% 76%, 50% 94%, 11% 74%, 11% 26%);
+  transition-timing-function: ease-in-out;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+.selected-champion-thumbnail-image-container {
+  display: inline-block;
+  position: relative;
+  width: 71px;
+  height: 71px;
+  background: white;
+}
+.selected-champion-thumbnail-image {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 65px;
+  height: 65px;
+}
+</style>
