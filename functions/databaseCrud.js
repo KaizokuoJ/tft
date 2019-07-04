@@ -12,7 +12,7 @@ try {
 }
 
 module.exports = {
-  getAvailableChampions: () => {
+  getAllAvailableChampions: () => {
     return new Promise((resolve, reject) => {
       let availableChampions = [];
       admin
@@ -34,6 +34,11 @@ module.exports = {
           }
         })
         .catch(error => reject(error));
+    });
+  },
+  createTeamComposition: teamCompositionChampions => {
+    return admin.firestore().collection("compositions").add({
+      champions: teamCompositionChampions
     });
   }
 };

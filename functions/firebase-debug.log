@@ -12729,3 +12729,638 @@ SyntaxError: Identifier 'teamCompositionChampionName' has already been declared
 [info] >  { synergies: [ 'ninja', 'elementalist', 'yordle' ],
 [info] >    cost: 3,
 [info] >    name: 'kennen' }
+[debug] [2019-07-04T17:14:37.746Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:14:39.015Z] Functions runtime initialized.
+[debug] [2019-07-04T17:14:39.016Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:14:39.064Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:17:39.971Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:17:41.198Z] Functions runtime initialized.
+[debug] [2019-07-04T17:17:41.199Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:17:41.254Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:19:50.057Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:19:50.057Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:19:51.342Z] Functions runtime initialized.
+[debug] [2019-07-04T17:19:51.343Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:19:51.398Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:21:43.316Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:21:44.562Z] Functions runtime initialized.
+[debug] [2019-07-04T17:21:44.563Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:21:44.612Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:22:02.312Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:22:03.606Z] Functions runtime initialized.
+[debug] [2019-07-04T17:22:03.607Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:22:03.664Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:22:46.209Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:22:47.499Z] Functions runtime initialized.
+[debug] [2019-07-04T17:22:47.500Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:22:47.567Z] firebase-admin has been stubbed.
+[warn] ⚠  /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:26
+        .then(response => {res.})
+                               ^
+
+SyntaxError: Unexpected token }
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:264:10)
+    at Object.runInThisContext (vm.js:316:10)
+    at Module._compile (internal/modules/cjs/loader.js:670:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:718:10)
+    at Module.load (internal/modules/cjs/loader.js:605:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:544:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:536:3)
+    at Module.require (internal/modules/cjs/loader.js:643:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-07-04T17:27:18.850Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:27:20.227Z] Functions runtime initialized.
+[debug] [2019-07-04T17:27:20.228Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:27:20.321Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:27:33.681Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:27:34.942Z] Functions runtime initialized.
+[debug] [2019-07-04T17:27:34.943Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:27:34.999Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:27:41.776Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:27:42.092Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:27:42.093Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:27:42.148Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:27:42.193Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:27:42.193Z] 
+[debug] [2019-07-04T17:27:42.193Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:27:42.198Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19005.sock"}
+[debug] [2019-07-04T17:27:42.199Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19005.sock"}
+[debug] [2019-07-04T17:27:42.219Z] Ephemeral server used!
+[debug] [2019-07-04T17:27:42.220Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:27:42.607Z] Ephemeral server survived.
+[info] >  (node:19005) UnhandledPromiseRejectionWarning: ReferenceError: db is not defined
+[info] >      at Object.createTeamComposition (/Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js:40:5)
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:25:10)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:19005) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:19005) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-07-04T17:27:55.614Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:27:56.963Z] Functions runtime initialized.
+[debug] [2019-07-04T17:27:56.964Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:27:57.014Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:28:02.359Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:28:02.741Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:28:02.742Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:28:02.830Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:28:02.886Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:28:02.886Z] 
+[debug] [2019-07-04T17:28:02.886Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:28:02.894Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19019.sock"}
+[debug] [2019-07-04T17:28:02.894Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19019.sock"}
+[debug] [2019-07-04T17:28:02.913Z] Ephemeral server used!
+[debug] [2019-07-04T17:28:02.914Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:28:03.271Z] Ephemeral server survived.
+[info] >  (node:19019) UnhandledPromiseRejectionWarning: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field champions).
+[info] >      at Object.validateUserInput (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:277:15)
+[info] >      at Object.validateDocumentData (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:612:26)
+[info] >      at CollectionReference.add (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1749:23)
+[info] >      at Object.createTeamComposition (/Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js:40:57)
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:25:10)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:19019) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:19019) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-07-04T17:29:23.940Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:29:25.307Z] Functions runtime initialized.
+[debug] [2019-07-04T17:29:25.307Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:29:25.384Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:29:32.294Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:29:33.569Z] Functions runtime initialized.
+[debug] [2019-07-04T17:29:33.570Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:29:33.626Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:29:39.538Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:29:39.804Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:29:39.805Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:29:39.859Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:29:39.908Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:29:39.908Z] 
+[debug] [2019-07-04T17:29:39.908Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:29:39.914Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19077.sock"}
+[debug] [2019-07-04T17:29:39.914Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19077.sock"}
+[debug] [2019-07-04T17:29:39.933Z] Ephemeral server used!
+[debug] [2019-07-04T17:29:39.933Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:29:40.287Z] Ephemeral server survived.
+[info] >  (node:19077) UnhandledPromiseRejectionWarning: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field champions).
+[info] >      at Object.validateUserInput (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:277:15)
+[info] >      at Object.validateDocumentData (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:612:26)
+[info] >      at CollectionReference.add (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1749:23)
+[info] >      at Object.createTeamComposition (/Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js:40:57)
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:25:10)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:19077) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:19077) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-07-04T17:30:01.842Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:30:03.180Z] Functions runtime initialized.
+[debug] [2019-07-04T17:30:03.181Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:30:03.252Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:30:03.858Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:30:04.102Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:30:04.103Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:30:04.151Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:30:04.196Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:30:04.197Z] 
+[debug] [2019-07-04T17:30:04.197Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:30:04.202Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19094.sock"}
+[debug] [2019-07-04T17:30:04.203Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19094.sock"}
+[debug] [2019-07-04T17:30:04.219Z] Ephemeral server used!
+[debug] [2019-07-04T17:30:04.220Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:30:04.591Z] Ephemeral server survived.
+[info] >  undefined
+[info] >  (node:19094) UnhandledPromiseRejectionWarning: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field champions).
+[info] >      at Object.validateUserInput (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:277:15)
+[info] >      at Object.validateDocumentData (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:612:26)
+[info] >      at CollectionReference.add (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1749:23)
+[info] >      at Object.createTeamComposition (/Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js:40:57)
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:26:10)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:19094) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:19094) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-07-04T17:30:46.341Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:30:47.606Z] Functions runtime initialized.
+[debug] [2019-07-04T17:30:47.607Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:30:47.678Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:30:53.074Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:30:53.322Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:30:53.323Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:30:53.393Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:30:53.461Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:30:53.462Z] 
+[debug] [2019-07-04T17:30:53.462Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:30:53.470Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19140.sock"}
+[debug] [2019-07-04T17:30:53.471Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19140.sock"}
+[debug] [2019-07-04T17:30:53.494Z] Ephemeral server used!
+[debug] [2019-07-04T17:30:53.495Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:30:53.894Z] Ephemeral server survived.
+[info] >  (node:19140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'then' of undefined
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:24:32)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:19140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:19140) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-07-04T17:31:33.090Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:31:34.510Z] Functions runtime initialized.
+[debug] [2019-07-04T17:31:34.511Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:31:34.607Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:33:53.915Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:33:55.365Z] Functions runtime initialized.
+[debug] [2019-07-04T17:33:55.366Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:33:55.469Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:34:12.740Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:34:14.004Z] Functions runtime initialized.
+[debug] [2019-07-04T17:34:14.005Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:34:14.063Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:34:34.461Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:34:35.849Z] Functions runtime initialized.
+[debug] [2019-07-04T17:34:35.850Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:34:35.935Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:34:40.194Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:34:40.468Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:34:40.469Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:34:40.524Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:34:40.571Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:34:40.571Z] 
+[debug] [2019-07-04T17:34:40.571Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:34:40.576Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19274.sock"}
+[debug] [2019-07-04T17:34:40.577Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19274.sock"}
+[debug] [2019-07-04T17:34:40.598Z] Ephemeral server used!
+[debug] [2019-07-04T17:34:40.598Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:34:40.982Z] Ephemeral server survived.
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-04T17:35:13.841Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:35:14.219Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:35:14.220Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:35:14.334Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:35:14.409Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:35:14.409Z] 
+[debug] [2019-07-04T17:35:14.409Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:35:14.416Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19292.sock"}
+[debug] [2019-07-04T17:35:14.416Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19292.sock"}
+[debug] [2019-07-04T17:35:14.436Z] Ephemeral server used!
+[debug] [2019-07-04T17:35:14.436Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:35:14.784Z] Ephemeral server survived.
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-04T17:35:33.708Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:35:34.950Z] Functions runtime initialized.
+[debug] [2019-07-04T17:35:34.951Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:35:34.997Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:35:35.342Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:35:36.636Z] Functions runtime initialized.
+[debug] [2019-07-04T17:35:36.637Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:35:36.705Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:35:45.560Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:35:45.831Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:35:45.832Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:35:45.883Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:35:45.934Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:35:45.934Z] 
+[debug] [2019-07-04T17:35:45.934Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:35:45.939Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19331.sock"}
+[debug] [2019-07-04T17:35:45.940Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19331.sock"}
+[debug] [2019-07-04T17:35:45.953Z] Ephemeral server used!
+[debug] [2019-07-04T17:35:45.953Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:35:46.164Z] Ephemeral server survived.
+[info] >  [ 'ninja',
+[info] >    'brawler',
+[info] >    'knight',
+[info] >    'gunslinger',
+[info] >    'sorcerer',
+[info] >    'ranger',
+[info] >    'elementalist' ]
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-04T17:35:59.985Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:36:01.231Z] Functions runtime initialized.
+[debug] [2019-07-04T17:36:01.232Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:36:01.293Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:36:24.592Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:36:25.639Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:36:25.872Z] Functions runtime initialized.
+[debug] [2019-07-04T17:36:25.873Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:36:25.935Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:36:26.899Z] Functions runtime initialized.
+[debug] [2019-07-04T17:36:26.900Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:36:26.953Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:36:29.239Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:36:29.519Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:36:29.520Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:36:29.583Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:36:29.635Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:36:29.635Z] 
+[debug] [2019-07-04T17:36:29.635Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:36:29.642Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19362.sock"}
+[debug] [2019-07-04T17:36:29.643Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19362.sock"}
+[debug] [2019-07-04T17:36:29.660Z] Ephemeral server used!
+[debug] [2019-07-04T17:36:29.661Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:36:30.002Z] Ephemeral server survived.
+[info] >  [ [ 'ninja' ],
+[info] >    [ 'brawler' ],
+[info] >    [ 'knight' ],
+[info] >    [ 'gunslinger' ],
+[info] >    [ 'sorcerer' ],
+[info] >    [ 'ranger' ],
+[info] >    [ 'elementalist' ] ]
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-04T17:37:17.990Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:37:19.255Z] Functions runtime initialized.
+[debug] [2019-07-04T17:37:19.255Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:37:19.300Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:37:25.662Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:37:25.939Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:37:25.941Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:37:26.004Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:37:26.053Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:37:26.053Z] 
+[debug] [2019-07-04T17:37:26.053Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:37:26.059Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19395.sock"}
+[debug] [2019-07-04T17:37:26.059Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19395.sock"}
+[debug] [2019-07-04T17:37:26.077Z] Ephemeral server used!
+[debug] [2019-07-04T17:37:26.078Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:37:26.401Z] Ephemeral server survived.
+[info] >  [ 'ninja' ]
+[info] >  [ 'brawler' ]
+[info] >  [ 'knight' ]
+[info] >  [ 'gunslinger' ]
+[info] >  [ 'sorcerer' ]
+[info] >  [ 'ranger' ]
+[info] >  [ 'elementalist' ]
+[info] >  [ [ 'ninja' ],
+[info] >    [ 'brawler' ],
+[info] >    [ 'knight' ],
+[info] >    [ 'gunslinger' ],
+[info] >    [ 'sorcerer' ],
+[info] >    [ 'ranger' ],
+[info] >    [ 'elementalist' ] ]
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-04T17:39:21.461Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:39:22.775Z] Functions runtime initialized.
+[debug] [2019-07-04T17:39:22.776Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:39:22.841Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:39:27.847Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T17:39:28.171Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T17:39:28.172Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:39:28.247Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:39:28.326Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T17:39:28.326Z] 
+[debug] [2019-07-04T17:39:28.326Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T17:39:28.334Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19463.sock"}
+[debug] [2019-07-04T17:39:28.335Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_19463.sock"}
+[debug] [2019-07-04T17:39:28.354Z] Ephemeral server used!
+[debug] [2019-07-04T17:39:28.355Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T17:39:28.694Z] Ephemeral server survived.
+[info] >  [ { synergies: [ 'demon', 'blademaster' ],
+[info] >      cost: 3,
+[info] >      name: 'aatrox' },
+[info] >    { cost: 2, synergies: [ 'wild', 'sorcerer' ], name: 'ahri' },
+[info] >    { synergies: [ 'ninja', 'assassin' ], cost: 4, name: 'akali' },
+[info] >    { cost: 5,
+[info] >      synergies: [ 'glacial', 'elementalist' ],
+[info] >      name: 'anivia' },
+[info] >    { synergies: [ 'glacial', 'ranger' ], cost: 3, name: 'ashe' },
+[info] >    { cost: 4,
+[info] >      synergies: [ 'dragon', 'sorcerer' ],
+[info] >      name: 'aurelionSol' },
+[info] >    { synergies: [ 'robot', 'brawler' ],
+[info] >      cost: 2,
+[info] >      name: 'blitzcrank' },
+[info] >    { cost: 4,
+[info] >      synergies: [ 'demon', 'elementalist' ],
+[info] >      name: 'brand' },
+[info] >    { synergies: [ 'glacial', 'guardian' ], cost: 2, name: 'braum' },
+[info] >    { cost: 4, synergies: [ 'void', 'brawler' ], name: "cho'gath" },
+[info] >    { cost: 1, synergies: [ 'imperial', 'knight' ], name: 'darius' },
+[info] >    { synergies: [ 'imperial', 'blademaster' ],
+[info] >      cost: 4,
+[info] >      name: 'draven' },
+[info] >    { cost: 2,
+[info] >      synergies: [ 'demon', 'shapeshifter' ],
+[info] >      name: 'elise' },
+[info] >    { synergies: [ 'demon', 'assassin' ], cost: 3, name: 'evelynn' },
+[info] >    { cost: 1, synergies: [ 'noble', 'blademaster' ], name: 'fiora' },
+[info] >    { synergies: [ 'pirate', 'blademaster', 'gunslinger' ],
+[info] >      cost: 3,
+[info] >      name: 'gangplank' },
+[info] >    { synergies: [ 'noble', 'knight' ], cost: 1, name: 'garen' },
+[info] >    { cost: 4,
+[info] >      synergies: [ 'wild', 'yordle', 'shapeshifter' ],
+[info] >      name: 'gnar' },
+[info] >    { cost: 1,
+[info] >      synergies: [ 'pirate', 'gunslinger' ],
+[info] >      name: 'graves' },
+[info] >    { synergies: [ 'phantom', 'sorcerer' ],
+[info] >      cost: 5,
+[info] >      name: 'karthus' },
+[info] >    { synergies: [ 'void', 'sorcerer' ], cost: 1, name: 'kassadin' },
+[info] >    { cost: 3,
+[info] >      synergies: [ 'imperial', 'assassin' ],
+[info] >      name: 'katarina' },
+[info] >    { cost: 5, synergies: [ 'noble', 'knight' ], name: 'kayle' },
+[info] >    { cost: 3,
+[info] >      synergies: [ 'ninja', 'elementalist', 'yordle' ],
+[info] >      name: 'kennen' },
+[info] >    { cost: 1, synergies: [ 'void', 'assassin' ], name: "kha'zix" },
+[info] >    { synergies: [ 'phantom', 'ranger' ], cost: 4, name: 'kindred' },
+[info] >    { cost: 4, synergies: [ 'noble', 'guardian' ], name: 'leona' },
+[info] >    { synergies: [ 'glacial', 'elementalist' ],
+[info] >      cost: 2,
+[info] >      name: 'lissandra' },
+[info] >    { synergies: [ 'noble', 'gunslinger' ], cost: 2, name: 'lucian' },
+[info] >    { synergies: [ 'yordle', 'sorcerer' ], cost: '2', name: 'lulu' },
+[info] >    { synergies: [ 'pirate', 'gunslinger' ],
+[info] >      cost: 5,
+[info] >      name: 'missFortune' },
+[info] >    { synergies: [ 'phantom', 'knight' ],
+[info] >      cost: 1,
+[info] >      name: 'mordekaiser' },
+[info] >    { synergies: [ 'demon', 'sorcerer' ], cost: 3, name: 'morgana' },
+[info] >    { synergies: [ 'wild', 'shapeshifter' ],
+[info] >      cost: 1,
+[info] >      name: 'nidalee' },
+[info] >    { cost: 3, synergies: [ 'yordle', 'knight' ], name: 'poppy' },
+[info] >    { synergies: [ 'pirate', 'assassin' ], cost: 2, name: 'pyke' },
+[info] >    { cost: 2, synergies: [ 'void', 'brawler' ], name: "rek'sai" },
+[info] >    { cost: 3, synergies: [ 'wild', 'assassin' ], name: 'rengar' },
+[info] >    { cost: 4, synergies: [ 'glacial', 'knight' ], name: 'sejauni' },
+[info] >    { synergies: [ 'ninja', 'blademaster' ], cost: 2, name: 'shen' },
+[info] >    { synergies: [ 'dragon', 'shapeshifter' ],
+[info] >      cost: 4,
+[info] >      name: 'shyvana' },
+[info] >    { cost: 5,
+[info] >      synergies: [ 'demon', 'imperial', 'shapeshifter' ],
+[info] >      name: 'swain' },
+[info] >    { cost: 1,
+[info] >      synergies: [ 'yordle', 'gunslinger' ],
+[info] >      name: 'tristana' },
+[info] >    { synergies: [ 'demon', 'ranger' ], cost: 2, name: 'varus' },
+[info] >    { cost: 1, synergies: [ 'noble', 'ranger' ], name: 'vayne' },
+[info] >    { cost: 3, synergies: [ 'yordle', 'sorcerer' ], name: 'veigar' },
+[info] >    { synergies: [ 'glacial', 'brawler' ],
+[info] >      cost: 3,
+[info] >      name: 'volibear' },
+[info] >    { cost: 1, synergies: [ 'wild', 'brawler' ], name: 'warwick' },
+[info] >    { cost: 5, synergies: [ 'exile', 'blademaster' ], name: 'yasuo' },
+[info] >    { cost: 2, synergies: [ 'ninja', 'assassin' ], name: 'zed' } ]
+[info] >  [ [ 'ninja' ],
+[info] >    [ 'brawler' ],
+[info] >    [ 'knight' ],
+[info] >    [ 'gunslinger' ],
+[info] >    [ 'sorcerer' ],
+[info] >    [ 'ranger' ],
+[info] >    [ 'elementalist' ] ]
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-04T17:39:54.012Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:39:55.354Z] Functions runtime initialized.
+[debug] [2019-07-04T17:39:55.355Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:39:55.427Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:45:34.280Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:45:34.281Z] File /Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js changed, reloading triggers
+[debug] [2019-07-04T17:45:35.668Z] Functions runtime initialized.
+[debug] [2019-07-04T17:45:35.668Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:45:35.742Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T17:59:34.358Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T17:59:35.647Z] Functions runtime initialized.
+[debug] [2019-07-04T17:59:35.647Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T17:59:35.710Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T18:00:16.273Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T18:00:17.554Z] Functions runtime initialized.
+[debug] [2019-07-04T18:00:17.555Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T18:00:17.612Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T18:00:33.686Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T18:00:34.978Z] Functions runtime initialized.
+[debug] [2019-07-04T18:00:34.978Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T18:00:35.039Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T18:00:41.485Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T18:00:41.763Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T18:00:41.765Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T18:00:41.823Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-04T18:00:41.875Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T18:00:41.875Z] 
+[debug] [2019-07-04T18:00:41.875Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T18:00:41.883Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_20254.sock"}
+[debug] [2019-07-04T18:00:41.884Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_20254.sock"}
+[debug] [2019-07-04T18:00:41.907Z] Ephemeral server used!
+[debug] [2019-07-04T18:00:41.907Z] Body{"champions": ["shen", "warwick", "kayle", "tristana", "veigar", "varus", "kennen"]}
+[debug] [2019-07-04T18:00:42.270Z] Ephemeral server survived.
+[info] >  [ { cost: 3,
+[info] >      synergies: [ 'demon', 'blademaster' ],
+[info] >      name: 'aatrox' },
+[info] >    { cost: 2, synergies: [ 'wild', 'sorcerer' ], name: 'ahri' },
+[info] >    { cost: 4, synergies: [ 'ninja', 'assassin' ], name: 'akali' },
+[info] >    { cost: 5,
+[info] >      synergies: [ 'glacial', 'elementalist' ],
+[info] >      name: 'anivia' },
+[info] >    { synergies: [ 'glacial', 'ranger' ], cost: 3, name: 'ashe' },
+[info] >    { synergies: [ 'dragon', 'sorcerer' ],
+[info] >      cost: 4,
+[info] >      name: 'aurelionSol' },
+[info] >    { cost: 2,
+[info] >      synergies: [ 'robot', 'brawler' ],
+[info] >      name: 'blitzcrank' },
+[info] >    { cost: 4,
+[info] >      synergies: [ 'demon', 'elementalist' ],
+[info] >      name: 'brand' },
+[info] >    { cost: 2, synergies: [ 'glacial', 'guardian' ], name: 'braum' },
+[info] >    { cost: 4, synergies: [ 'void', 'brawler' ], name: "cho'gath" },
+[info] >    { synergies: [ 'imperial', 'knight' ], cost: 1, name: 'darius' },
+[info] >    { synergies: [ 'imperial', 'blademaster' ],
+[info] >      cost: 4,
+[info] >      name: 'draven' },
+[info] >    { synergies: [ 'demon', 'shapeshifter' ],
+[info] >      cost: 2,
+[info] >      name: 'elise' },
+[info] >    { cost: 3, synergies: [ 'demon', 'assassin' ], name: 'evelynn' },
+[info] >    { synergies: [ 'noble', 'blademaster' ], cost: 1, name: 'fiora' },
+[info] >    { cost: 3,
+[info] >      synergies: [ 'pirate', 'blademaster', 'gunslinger' ],
+[info] >      name: 'gangplank' },
+[info] >    { cost: 1, synergies: [ 'noble', 'knight' ], name: 'garen' },
+[info] >    { cost: 4,
+[info] >      synergies: [ 'wild', 'yordle', 'shapeshifter' ],
+[info] >      name: 'gnar' },
+[info] >    { cost: 1,
+[info] >      synergies: [ 'pirate', 'gunslinger' ],
+[info] >      name: 'graves' },
+[info] >    { cost: 5,
+[info] >      synergies: [ 'phantom', 'sorcerer' ],
+[info] >      name: 'karthus' },
+[info] >    { synergies: [ 'void', 'sorcerer' ], cost: 1, name: 'kassadin' },
+[info] >    { synergies: [ 'imperial', 'assassin' ],
+[info] >      cost: 3,
+[info] >      name: 'katarina' },
+[info] >    { cost: 5, synergies: [ 'noble', 'knight' ], name: 'kayle' },
+[info] >    { cost: 3,
+[info] >      synergies: [ 'ninja', 'elementalist', 'yordle' ],
+[info] >      name: 'kennen' },
+[info] >    { synergies: [ 'void', 'assassin' ], cost: 1, name: "kha'zix" },
+[info] >    { cost: 4, synergies: [ 'phantom', 'ranger' ], name: 'kindred' },
+[info] >    { synergies: [ 'noble', 'guardian' ], cost: 4, name: 'leona' },
+[info] >    { synergies: [ 'glacial', 'elementalist' ],
+[info] >      cost: 2,
+[info] >      name: 'lissandra' },
+[info] >    { synergies: [ 'noble', 'gunslinger' ], cost: 2, name: 'lucian' },
+[info] >    { cost: '2', synergies: [ 'yordle', 'sorcerer' ], name: 'lulu' },
+[info] >    { cost: 5,
+[info] >      synergies: [ 'pirate', 'gunslinger' ],
+[info] >      name: 'missFortune' },
+[info] >    { synergies: [ 'phantom', 'knight' ],
+[info] >      cost: 1,
+[info] >      name: 'mordekaiser' },
+[info] >    { cost: 3, synergies: [ 'demon', 'sorcerer' ], name: 'morgana' },
+[info] >    { cost: 1,
+[info] >      synergies: [ 'wild', 'shapeshifter' ],
+[info] >      name: 'nidalee' },
+[info] >    { synergies: [ 'yordle', 'knight' ], cost: 3, name: 'poppy' },
+[info] >    { cost: 2, synergies: [ 'pirate', 'assassin' ], name: 'pyke' },
+[info] >    { cost: 2, synergies: [ 'void', 'brawler' ], name: "rek'sai" },
+[info] >    { cost: 3, synergies: [ 'wild', 'assassin' ], name: 'rengar' },
+[info] >    { synergies: [ 'glacial', 'knight' ], cost: 4, name: 'sejauni' },
+[info] >    { synergies: [ 'ninja', 'blademaster' ], cost: 2, name: 'shen' },
+[info] >    { cost: 4,
+[info] >      synergies: [ 'dragon', 'shapeshifter' ],
+[info] >      name: 'shyvana' },
+[info] >    { cost: 5,
+[info] >      synergies: [ 'demon', 'imperial', 'shapeshifter' ],
+[info] >      name: 'swain' },
+[info] >    { synergies: [ 'yordle', 'gunslinger' ],
+[info] >      cost: 1,
+[info] >      name: 'tristana' },
+[info] >    { cost: 2, synergies: [ 'demon', 'ranger' ], name: 'varus' },
+[info] >    { cost: 1, synergies: [ 'noble', 'ranger' ], name: 'vayne' },
+[info] >    { cost: 3, synergies: [ 'yordle', 'sorcerer' ], name: 'veigar' },
+[info] >    { cost: 3,
+[info] >      synergies: [ 'glacial', 'brawler' ],
+[info] >      name: 'volibear' },
+[info] >    { cost: 1, synergies: [ 'wild', 'brawler' ], name: 'warwick' },
+[info] >    { cost: 5, synergies: [ 'exile', 'blademaster' ], name: 'yasuo' },
+[info] >    { synergies: [ 'ninja', 'assassin' ], cost: 2, name: 'zed' } ]
+[info] i  functions: Finished "createTeamComposition" in ~1s
