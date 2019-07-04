@@ -60,7 +60,20 @@ export default {
 
   methods: {
     createTeamComposition() {
-      const data = this.champions;
+      let data = {};
+      let champions = [];
+      champions.push(this.champion1);
+      champions.push(this.champion2);
+      champions.push(this.champion3);
+      champions.push(this.champion4);
+      champions.push(this.champion5);
+      champions.push(this.champion6);
+      champions.push(this.champion7);
+      champions.push(this.champion8);
+      champions.push(this.champion9);
+
+      data.champions = champions;
+
       axios
         .post(
           "https://us-central1-tft-cheatsheets.cloudfunctions.net/createTeamComposition",

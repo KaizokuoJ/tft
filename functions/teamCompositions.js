@@ -1,14 +1,23 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const cors = require("cors")({ origin: true });
+const serviceAccount = require("./tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
 const databaseCrud = require("./databaseCrud");
+
+try {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://tft-cheatsheets.firebaseio.com"
+  });
+} catch (e) {
+  console.log("App already initialized");
+}
 
 module.exports = {
   createTeamComposition: functions.https.onRequest((req, res) => {
     cors(req, res, async () => {
-      console.log(req.body);
-      const teamCompositionChampions = req.body;
+      const teamCompositionChampions = req.body.champions;
       const teamCompositionSynergies = await module.exports.getTeamCompositionSynergies(
         teamCompositionChampions
       );
@@ -19,20 +28,31 @@ module.exports = {
   }),
 
   getTeamCompositionSynergies: async teamCompositionChampions => {
-    const availableChampions = await databaseCrud.getAvailableChampions();
-    const teamCompositionTypes = [];
+    databaseCrud
+      .getAvailableChampions()
+      .then(availableChampions => {
+        return module.exports.getTeamCompositionTypes(
+          teamCompositionChampions,
+          availableChampions
+        );
+      })
+      .catch(error => console.log(error));
+  },
 
-    teamCompositionChampions.forEach((key, value) => {
-      const champion = availableChampions.find(value);
-      console.log(champion);
-      teamCompositionTypes.push(getChampionTypes(champion));
+  getTeamCompositionTypes(teamCompositionChampions, availableChampions) {
+    const teamCompositionTypes = [];
+    teamCompositionChampions.forEach(teamCompositionChampionName => {
+      const champion = availableChampions.find(availableChampion => {
+        return availableChampion.name === teamCompositionChampionName;
+      });
+      teamCompositionTypes.push(module.exports.getChampionTypes(champion));
     });
     return teamCompositionTypes.flat();
   },
 
-
   getChampionTypes: champion => {
     let championTypes = [];
+    console.log(champion);
 
     if (champion.synergies.includes("assassin")) {
       championTypes.push("assassin");

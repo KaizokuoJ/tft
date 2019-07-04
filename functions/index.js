@@ -10,7 +10,7 @@ try {
     databaseURL: "https://tft-cheatsheets.firebaseio.com"
   });
 } catch (e) {
-  console.log(e);
+  console.log('App already initialized');
 }
 
 module.exports = {
