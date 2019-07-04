@@ -1,8 +1,18 @@
-const functions = require('firebase-functions');
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+const serviceAccount = require("./tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+const teamCompositions = require("./teamCompositions");
+
+try {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://tft-cheatsheets.firebaseio.com"
+  });
+} catch (e) {
+  console.log(e);
+}
+
+module.exports = {
+  createTeamComposition: teamCompositions.createTeamComposition
+};

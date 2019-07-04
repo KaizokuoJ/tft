@@ -1,0 +1,162 @@
+[debug] [2019-07-04T14:37:03.024Z] ----------------------------------------------------------------------
+[debug] [2019-07-04T14:37:03.026Z] Command:       /usr/local/Cellar/node/11.0.0/bin/node /usr/local/bin/firebase serve
+[debug] [2019-07-04T14:37:03.026Z] CLI Version:   7.0.2
+[debug] [2019-07-04T14:37:03.026Z] Platform:      darwin
+[debug] [2019-07-04T14:37:03.026Z] Node Version:  v11.0.0
+[debug] [2019-07-04T14:37:03.027Z] Time:          Thu Jul 04 2019 16:37:03 GMT+0200 (Central European Summer Time)
+[debug] [2019-07-04T14:37:03.027Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-04T14:37:03.036Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-04T14:37:03.036Z] > authorizing via signed-in user
+[debug] [2019-07-04T14:37:03.036Z] [iam] checking project tft-cheatsheets for permissions ["firebase.projects.get"]
+[debug] [2019-07-04T14:37:03.038Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tft-cheatsheets:testIamPermissions  
+
+[debug] [2019-07-04T14:37:03.943Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-04T14:37:03.944Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tft-cheatsheets  
+ 
+[debug] [2019-07-04T14:37:04.757Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/jordy/code/KaizokuoJ/tft'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "11"
+[debug] [2019-07-04T14:37:04.765Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/559741858535/clients/_:getWebAppConfig  
+ 
+[debug] [2019-07-04T14:37:04.766Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/559741858535:getServerAppConfig  
+ 
+[debug] [2019-07-04T14:37:05.005Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-07-04T14:37:05.105Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/jordy/code/KaizokuoJ/tft/functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: dist
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-07-04T14:37:05.404Z] Functions runtime initialized.
+[debug] [2019-07-04T14:37:05.404Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T14:37:05.481Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5001/tft-cheatsheets/us-central1/createTeamComposition
+[debug] [2019-07-04T14:37:28.579Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T14:37:28.997Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T14:37:28.998Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T14:37:29.086Z] firebase-admin has been stubbed.
+[debug] [2019-07-04T14:37:29.171Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T14:37:29.172Z] 
+[debug] [2019-07-04T14:37:29.172Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T14:37:29.178Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_12340.sock"}
+[debug] [2019-07-04T14:37:29.181Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_12340.sock"}
+[debug] [2019-07-04T14:37:29.207Z] Ephemeral server used!
+[debug] [2019-07-04T14:37:29.208Z] Body{"champion1": "shen",
+"champion2": "warwick",
+"champion3": "tristana",
+"champion4": "kayle",
+"champion5": "garen",
+"champion6": "darius",
+"champion7": "lulu",
+"champion8": "leona",
+"champion9": "sejuani"}
+[info] >  {"champion1": "shen",
+"champion2": "warwick",
+"champion3": "tristana",
+"champion4": "kayle",
+"champion5": "garen",
+"champion6": "darius",
+"champion7": "lulu",
+"champion8": "leona",
+"champion9": "sejuani"}
+[debug] [2019-07-04T14:37:29.654Z] Ephemeral server survived.
+[info] >  (node:12340) UnhandledPromiseRejectionWarning: TypeError: teamCompositionChampions.forEach is not a function
+[info] >      at Object.getTeamCompositionSynergies (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:25:30)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:12340) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:12340) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] >  TypeError: Cannot read property 'data' of undefined
+[info] >      at admin.firestore.collection.get.then.championsQuerySnapshot (/Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js:16:54)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[debug] [2019-07-04T14:37:51.899Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T14:37:53.234Z] Functions runtime initialized.
+[debug] [2019-07-04T14:37:53.235Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T14:37:53.302Z] firebase-admin has been stubbed.
+[debug] [2019-07-04T14:37:59.388Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T14:37:59.657Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T14:37:59.658Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T14:37:59.719Z] firebase-admin has been stubbed.
+[debug] [2019-07-04T14:37:59.769Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T14:37:59.769Z] 
+[debug] [2019-07-04T14:37:59.769Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T14:37:59.776Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_12362.sock"}
+[debug] [2019-07-04T14:37:59.777Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_12362.sock"}
+[debug] [2019-07-04T14:37:59.792Z] Ephemeral server used!
+[debug] [2019-07-04T14:37:59.793Z] Body{"champion1": "shen",
+"champion2": "warwick",
+"champion3": "tristana",
+"champion4": "kayle",
+"champion5": "garen",
+"champion6": "darius",
+"champion7": "lulu",
+"champion8": "leona",
+"champion9": "sejuani"}
+[info] >  {"champion1": "shen",
+"champion2": "warwick",
+"champion3": "tristana",
+"champion4": "kayle",
+"champion5": "garen",
+"champion6": "darius",
+"champion7": "lulu",
+"champion8": "leona",
+"champion9": "sejuani"}
+[debug] [2019-07-04T14:37:59.795Z] Ephemeral server survived.
+[info] >  (node:12362) UnhandledPromiseRejectionWarning: TypeError: exports.getTeamCompositionSynergies is not a function
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:12:54)
+[info] >      at cors (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/cors/lib/index.js:188:7)
+[info] >      at /Users/jordy/code/KaizokuoJ/tft/functions/node_modules/cors/lib/index.js:224:17
+[info] >      at originCallback (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/cors/lib/index.js:214:15)
+[info] >      at /Users/jordy/code/KaizokuoJ/tft/functions/node_modules/cors/lib/index.js:219:13
+[info] >      at optionsCallback (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/cors/lib/index.js:199:9)
+[info] >      at corsMiddleware (/Users/jordy/code/KaizokuoJ/tft/functions/node_modules/cors/lib/index.js:204:7)
+[info] >      at module.exports.createTeamComposition.functions.https.onRequest (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:9:5)
+[info] >      at Run (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:518:20)
+[info] >      at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:492:19
+[info] >  (node:12362) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:12362) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-07-04T14:38:07.691Z] File /Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js changed, reloading triggers
+[debug] [2019-07-04T14:38:09.031Z] Functions runtime initialized.
+[debug] [2019-07-04T14:38:09.032Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T14:38:09.089Z] firebase-admin has been stubbed.
+[debug] [2019-07-04T14:38:10.123Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-04T14:38:10.437Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-04T14:38:10.438Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-04T14:38:10.498Z] firebase-admin has been stubbed.
+[debug] [2019-07-04T14:38:10.547Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-04T14:38:10.547Z] 
+[debug] [2019-07-04T14:38:10.547Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-04T14:38:10.553Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_12370.sock"}
+[debug] [2019-07-04T14:38:10.554Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_12370.sock"}
+[debug] [2019-07-04T14:38:10.568Z] Ephemeral server used!
+[debug] [2019-07-04T14:38:10.569Z] Body{"champion1": "shen",
+"champion2": "warwick",
+"champion3": "tristana",
+"champion4": "kayle",
+"champion5": "garen",
+"champion6": "darius",
+"champion7": "lulu",
+"champion8": "leona",
+"champion9": "sejuani"}
+[info] >  {"champion1": "shen",
+"champion2": "warwick",
+"champion3": "tristana",
+"champion4": "kayle",
+"champion5": "garen",
+"champion6": "darius",
+"champion7": "lulu",
+"champion8": "leona",
+"champion9": "sejuani"}
+[debug] [2019-07-04T14:38:10.810Z] Ephemeral server survived.
+[info] >  (node:12370) UnhandledPromiseRejectionWarning: TypeError: teamCompositionChampions.forEach is not a function
+[info] >      at Object.getTeamCompositionSynergies (/Users/jordy/code/KaizokuoJ/tft/functions/teamCompositions.js:25:30)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[info] >  (node:12370) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:12370) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] >  TypeError: Cannot read property 'data' of undefined
+[info] >      at admin.firestore.collection.get.then.championsQuerySnapshot (/Users/jordy/code/KaizokuoJ/tft/functions/databaseCrud.js:16:54)
+[info] >      at process.internalTickCallback (internal/process/next_tick.js:77:7)
