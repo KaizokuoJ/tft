@@ -9,17 +9,15 @@
         >
           <b-input-group>
             <b-form-input
-              @keyup.enter="
-                addChampionToSelectedChampionList(championFromInput)
-              "
-              v-model="championFromInput"
+              @keyup.enter="addChampionToSelectedChampions(championNameFromInput)"
+              v-model="championNameFromInput"
               placeholder="Enter a champion name"
             >
             </b-form-input>
             <b-input-group-append>
               <b-button
-                :disabled="!championFromInput"
-                @click="addChampionToSelectedChampionList(championFromInput)"
+                :disabled="!championNameFromInput"
+                @click="addChampionToSelectedChampions(championNameFromInput)"
                 >Add
               </b-button>
             </b-input-group-append>
@@ -30,10 +28,12 @@
 
     <b-row>
       <b-col md="8" offset="2">
+          <p v-if="selectedChampions.length !== 0" class="text-white text-muted">Click champion portraits to remove them from your composition<p/>
         <div class="selected-champions-display text-white mx-auto mb-3">
           <div
             v-for="championName in selectedChampions"
             class="selected-champion-thumbnail-image-container selected-champion-thumbnail"
+            @click="removeChampionFromSelectedChampions(championName)"
           >
             <img
               :src="getChampionThumbnailImage(championName)"
@@ -49,6 +49,7 @@
         <b-table
           stacked="md"
           show-empty
+          empty-text="No team comps found using given champion(s)"
           :items="getTeamCompositionsToRender"
           :fields="teamCompositionsToRenderFields"
           class="text-white"
@@ -68,7 +69,7 @@ export default {
       availableChampions: [],
       selectedChampions: [],
       availableTeamCompositions: [],
-      championFromInput: "",
+      championNameFromInput: "",
       teamCompositionsToRenderFields: []
     };
   },
@@ -102,9 +103,15 @@ export default {
       return teamComposition.champions.includes(selectedChampion);
     },
 
-    addChampionToSelectedChampionList(champion) {
-      this.championFromInput = "";
-      this.selectedChampions.push(champion);
+    addChampionToSelectedChampions(championName) {
+      this.championNameFromInput = "";
+      this.selectedChampions.push(championName);
+    },
+
+    removeChampionFromSelectedChampions(championName) {
+        this.selectedChampions = this.selectedChampions.filter(selectedChampion => {
+          return selectedChampion !== championName
+        })
     },
 
     getChampionThumbnailImage(championName) {
