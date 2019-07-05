@@ -17,10 +17,20 @@
             {{ synergy.type }}
           </div>
         </template>
-        <template slot="championNames">
-            <div class="d-inline-block">
-                
-            </div>
+          <template slot="size" slot-scope="row">
+              {{row.item.championNames.length}}
+          </template>
+        <template slot="champions" slot-scope="row">
+          <div
+            v-for="champion in sortChampionsByCost(row.item.champions)"
+            class="d-inline-block"
+          >
+            <img
+              :src="getChampionThumbnailImage(champion.name)"
+              alt="Image of a champion that was entered in the input field"
+              class="selected-champion-thumbnail-image selected-champion-thumbnail"
+            />
+          </div>
         </template>
       </b-table>
     </b-col>
@@ -36,12 +46,35 @@ export default {
       availableChampions: [],
       teamCompositionsToRenderFields: [
         { key: "synergies" },
-        {key: "championNames", label: 'Champions'}
+        { key: "size" },
+        { key: "champions" }
       ]
     };
   },
   props: ["teamCompositionsToRender"],
-  methods: {},
+  methods: {
+    getChampionThumbnailImage(championName) {
+      return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
+        championName
+      )}.png`);
+    },
+    capitalizeFirstLetter: string => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+    sortChampionsByCost: function(champions) {
+      const championsSortedByCost = champions.sort(this.compare);
+      return championsSortedByCost;
+    },
+    compare: function(a, b) {
+      if (a.cost < b.cost) {
+        return -1;
+      }
+      if (a.cost > b.cost) {
+        return 1;
+      }
+      return 0;
+    }
+  },
   created() {
     db.collection("champions")
       .get()
