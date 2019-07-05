@@ -85,20 +85,10 @@ export default {
       let teamCompositionShouldBeRendered = false;
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
         const selectedChampion = this.selectedChampions[i];
-        teamCompositionShouldBeRendered = this.doesTeamCompositionIncludeSelectedChampion(
-          teamComposition,
-          selectedChampion
-        );
+        teamCompositionShouldBeRendered = teamComposition.champions.includes(selectedChampion);
         if (!teamCompositionShouldBeRendered) return false;
       }
       return teamCompositionShouldBeRendered;
-    },
-
-    doesTeamCompositionIncludeSelectedChampion(
-      teamComposition,
-      selectedChampion
-    ) {
-      return teamComposition.champions.includes(selectedChampion);
     },
 
     addChampionToSelectedChampions(championName) {

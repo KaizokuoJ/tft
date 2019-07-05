@@ -26,7 +26,6 @@ module.exports = {
             i++
           ) {
             const champion = championsQuerySnapshot.docs[i].data();
-            champion.name = championsQuerySnapshot.docs[i].id;
             availableChampions.push(champion);
             if (i < len - 1) {
               resolve(availableChampions);
@@ -36,9 +35,14 @@ module.exports = {
         .catch(error => reject(error));
     });
   },
-  createTeamComposition: teamCompositionChampions => {
-    return admin.firestore().collection("compositions").add({
-      champions: teamCompositionChampions
-    });
+  createTeamComposition: (teamCompositionChampions, teamCompositionSynergies) => {
+    return admin
+      .firestore()
+      .collection("compositions")
+      .add({
+        champions: teamCompositionChampions,
+        synergies: teamCompositionSynergies
+      });
   }
+
 };
