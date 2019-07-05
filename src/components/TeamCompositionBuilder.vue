@@ -85,7 +85,7 @@ export default {
       let teamCompositionShouldBeRendered = false;
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
         const selectedChampion = this.selectedChampions[i];
-        teamCompositionShouldBeRendered = teamComposition.champions.includes(selectedChampion);
+        teamCompositionShouldBeRendered = teamComposition.championNames.includes(selectedChampion);
         if (!teamCompositionShouldBeRendered) return false;
       }
       return teamCompositionShouldBeRendered;

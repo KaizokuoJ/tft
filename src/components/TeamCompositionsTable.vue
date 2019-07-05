@@ -10,7 +10,17 @@
         class="text-white"
       >
         <template slot="synergies" slot-scope="row">
-          {{ getTeamCompositionSynergies(row.item.synergies) }}
+          <div
+            v-for="synergy in row.item.synergies"
+            class="d-inline-block mx-3"
+          >
+            {{ synergy.type }}
+          </div>
+        </template>
+        <template slot="championNames">
+            <div class="d-inline-block">
+                
+            </div>
         </template>
       </b-table>
     </b-col>
@@ -24,15 +34,14 @@ export default {
   data() {
     return {
       availableChampions: [],
-      teamCompositionsToRenderFields: [{ key: "synergies" }]
+      teamCompositionsToRenderFields: [
+        { key: "synergies" },
+        {key: "championNames", label: 'Champions'}
+      ]
     };
   },
   props: ["teamCompositionsToRender"],
-  methods: {
-    getTeamCompositionSynergies(teamCompositionTypes) {
-
-    }
-  },
+  methods: {},
   created() {
     db.collection("champions")
       .get()

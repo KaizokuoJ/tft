@@ -26,7 +26,11 @@ module.exports = {
       );
 
       databaseCrud
-        .createTeamComposition(teamCompositionChampions, teamCompositionSynergies)
+        .createTeamComposition(
+          teamCompositionChampions,
+          teamCompositionSynergies,
+          teamCompositionChampionNames
+        )
         .then(response => {
           return res.status(200).send("Team Composition created");
         })
@@ -98,9 +102,11 @@ module.exports = {
       const teamCompositionClassesAndOriginsTotalCount = module.exports.getTeamCompositionClassesAndOriginsTotalCount(
         teamCompositionClassesAndOrigins
       );
-      resolve(module.exports.getSynergiesFromCompositionClassesAndOriginsTotalCount(
-        teamCompositionClassesAndOriginsTotalCount
-      ));
+      resolve(
+        module.exports.getSynergiesFromCompositionClassesAndOriginsTotalCount(
+          teamCompositionClassesAndOriginsTotalCount
+        )
+      );
     });
   },
 
@@ -138,129 +144,129 @@ module.exports = {
     teamCompositionClassesAndOriginsTotalCount.forEach(classOrOriginCount => {
       if (classOrOriginCount.value === "Demon") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ demon: 3 });
+          compositionSynergies.push({ type: "demon", level: 3 });
         } else if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ demon: 2 });
+          compositionSynergies.push({ type: "demon", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ demon: 1 });
+          compositionSynergies.push({ type: "demon", level: 1 });
         }
       } else if (classOrOriginCount.value === "Dragon") {
         if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ dragon: 1 });
+          compositionSynergies.push({ type: "dragon", level: 1 });
         }
       } else if (classOrOriginCount.value === "Exile") {
         if (classOrOriginCount.count >= 1) {
-          compositionSynergies.push({ exile: 1 });
+          compositionSynergies.push({ type: "exile", level: 1 });
         }
       } else if (classOrOriginCount.value === "Glacial") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ glacial: 3 });
+          compositionSynergies.push({ type: "glacial", level: 3 });
         } else if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ glacial: 2 });
+          compositionSynergies.push({ type: "glacial", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ glacial: 1 });
+          compositionSynergies.push({ type: "glacial", level: 1 });
         }
       } else if (classOrOriginCount.value === "Imperial") {
         if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ imperial: 2 });
+          compositionSynergies.push({ type: "imperial", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({imperial: 1})
+          compositionSynergies.push({ type: "imperial", level: 1 });
         }
       } else if (classOrOriginCount.value === "Noble") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ noble: 2 });
-        } else if(classOrOriginCount.count >= 3) {
-          compositionSynergies.push({noble: 1})
+          compositionSynergies.push({ type: "noble", level: 2 });
+        } else if (classOrOriginCount.count >= 3) {
+          compositionSynergies.push({ type: "noble", level: 1 });
         }
       } else if (classOrOriginCount.value === "Ninja") {
         if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ ninja: 2 });
-        } else if(classOrOriginCount.count >= 1) {
-          compositionSynergies.push({ninja: 1})
+          compositionSynergies.push({ type: "ninja", level: 2 });
+        } else if (classOrOriginCount.count >= 1) {
+          compositionSynergies.push({ type: "ninja", level: 1 });
         }
       } else if (classOrOriginCount.value === "Pirate") {
         if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ pirate: 1 });
+          compositionSynergies.push({ type: "pirate", level: 1 });
         }
       } else if (classOrOriginCount.value === "Phantom") {
         if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ phantom: 1 });
+          compositionSynergies.push({ type: "phantom", level: 1 });
         }
       } else if (classOrOriginCount.value === "Robot") {
         if (classOrOriginCount.count >= 1) {
-          compositionSynergies.push({ robot: 1 });
+          compositionSynergies.push({ type: "robot",  level: 1 });
         }
       } else if (classOrOriginCount.value === "Void") {
         if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ void: 1 });
+          compositionSynergies.push({ type: "void", level: 1 });
         }
       } else if (classOrOriginCount.value === "Wild") {
         if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ wild: 2 });
-        } else if(classOrOriginCount.count >= 2) {
-          compositionSynergies.push({wild: 1})
+          compositionSynergies.push({ type: "wild", level: 2 });
+        } else if (classOrOriginCount.count >= 2) {
+          compositionSynergies.push({ type: "wild", level: 1 });
         }
       } else if (classOrOriginCount.value === "Yordle") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ yordle: 2 });
+          compositionSynergies.push({ type: "yordle", level: 2 });
         } else if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ yordle: 1 });
+          compositionSynergies.push({ type: "yordle", level: 1 });
         }
       } else if (classOrOriginCount.value === "Assassin") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ assassin: 2 });
+          compositionSynergies.push({ type: "assassin", level: 2 });
         } else if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ assassin: 1 });
+          compositionSynergies.push({ type: "assassin", level: 1 });
         }
       } else if (classOrOriginCount.value === "Blademaster") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ blademaster: 2 });
+          compositionSynergies.push({ type: "blademaster", level: 2 });
         } else if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ blademaster: 1 });
+          compositionSynergies.push({ type: "blademaster", level: 1 });
         }
       } else if (classOrOriginCount.value === "Brawler") {
         if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ brawler: 2 });
+          compositionSynergies.push({ type: "brawler", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ brawler: 1 });
+          compositionSynergies.push({ type: "brawler", level: 1 });
         }
       } else if (classOrOriginCount.value === "Elementalist") {
         if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ elementalist: 1 });
+          compositionSynergies.push({ type: "elementalist", level: 1 });
         }
       } else if (classOrOriginCount.value === "Guardian") {
         if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ guardian: 1 });
+          compositionSynergies.push({ type: "guardian", level: 1 });
         }
       } else if (classOrOriginCount.value === "Gunslinger") {
         if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ gunslinger: 2 });
+          compositionSynergies.push({ type: "gunslinger", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ gunslinger: 1 });
+          compositionSynergies.push({ type: "gunslinger", level: 1 });
         }
       } else if (classOrOriginCount.value === "Knight") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ knight: 3 });
+          compositionSynergies.push({ type: "knight", level: 3 });
         } else if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ knight: 2 });
+          compositionSynergies.push({ type: "knight", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ knight: 1 });
+          compositionSynergies.push({ type: "knight", level: 1 });
         }
       } else if (classOrOriginCount.value === "Ranger") {
         if (classOrOriginCount.count >= 4) {
-          compositionSynergies.push({ ranger: 2 });
+          compositionSynergies.push({ type: "ranger", level: 2 });
         } else if (classOrOriginCount.count >= 2) {
-          compositionSynergies.push({ ranger: 1 });
+          compositionSynergies.push({ type: "ranger", level: 1 });
         }
       } else if (classOrOriginCount.value === "Shapeshifter") {
         if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ shapeshifter: 1 });
+          compositionSynergies.push({ type: "shapeshifter", level: 1 });
         }
       } else if (classOrOriginCount.value === "Sorcerer") {
         if (classOrOriginCount.count >= 6) {
-          compositionSynergies.push({ sorcerer: 2 });
+          compositionSynergies.push({ type: "sorcerer", level: 2 });
         } else if (classOrOriginCount.count >= 3) {
-          compositionSynergies.push({ sorcerer: 1 });
+          compositionSynergies.push({ type: "sorcerer", level: 1 });
         }
       }
     });

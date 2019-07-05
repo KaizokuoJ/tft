@@ -35,13 +35,15 @@ module.exports = {
         .catch(error => reject(error));
     });
   },
-  createTeamComposition: (teamCompositionChampions, teamCompositionSynergies) => {
+  createTeamComposition: (teamCompositionChampions, teamCompositionSynergies, teamCompositionChampionNames) => {
     return admin
       .firestore()
       .collection("compositions")
       .add({
+        championNames: teamCompositionChampionNames,
         champions: teamCompositionChampions,
-        synergies: teamCompositionSynergies
+        synergies: teamCompositionSynergies,
+        createdAt: admin.firestore.Timestamp.now()
       });
   }
 
