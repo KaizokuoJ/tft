@@ -4,10 +4,11 @@
       <b-table
         stacked="md"
         show-empty
-        empty-text="No team comps found using given champion(s)"
+        :empty-text="getTableEmptyText()"
         :items="teamCompositionsToRender"
         :fields="teamCompositionsToRenderFields"
         class="text-white"
+        sort-by="championNames.length"
       >
         <template slot="synergies" slot-scope="row">
           <div
@@ -31,7 +32,7 @@
         </template>
         <template slot="champions" slot-scope="row">
           <div
-            v-for="champion in sortChampionsByCost(row.item.champions)"
+            v-for="champion in getChampionsSortedByCost(row.item.champions)"
             class="champion-thumbnail champion-thumbnail-image-container d-inline-block"
             :class="getChampionThumbnailContainerClass(champion)"
           >
@@ -48,20 +49,19 @@
 </template>
 
 <script>
-import db from "../firebaseConfig";
 
 export default {
   data() {
     return {
       availableChampions: [],
       teamCompositionsToRenderFields: [
-        { key: "size", sortable: true },
+        { key: "championNames.length", label: "Team Size", sortable: true },
         { key: "synergies" },
         { key: "champions" }
       ]
     };
   },
-  props: ["teamCompositionsToRender"],
+  props: ["teamCompositionsToRender", "selectedChampions"],
   methods: {
     getChampionThumbnailImage(championName) {
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
@@ -75,19 +75,25 @@ export default {
     },
     getChampionThumbnailContainerClass(champion) {
       return {
-        'champion-thumbnail-image-container-5-cost': champion.cost === 5,
-        'champion-thumbnail-image-container-4-cost': champion.cost === 4,
-        'champion-thumbnail-image-container-3-cost': champion.cost === 3,
-        'champion-thumbnail-image-container-2-cost': champion.cost === 2,
-        'champion-thumbnail-image-container-1-cost': champion.cost === 1
+        "champion-thumbnail-image-container-5-cost": champion.cost === 5,
+        "champion-thumbnail-image-container-4-cost": champion.cost === 4,
+        "champion-thumbnail-image-container-3-cost": champion.cost === 3,
+        "champion-thumbnail-image-container-2-cost": champion.cost === 2,
+        "champion-thumbnail-image-container-1-cost": champion.cost === 1
+      };
+    },
+    getTableEmptyText() {
+      if (this.selectedChampions.length === 0) {
+        return "No champion entered yet";
+      } else if (this.selectedChampions.length === 1) {
+        return "Sorry, I didn't implement a comp with your selected champion yet, please chat with me in the bottom right-hand corner if you have any suggestions";
       }
     },
     capitalizeFirstLetter: string => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     },
-    sortChampionsByCost: function(champions) {
-      const championsSortedByCost = champions.sort(this.compare);
-      return championsSortedByCost;
+    getChampionsSortedByCost: function(champions) {
+      return champions.slice().sort(this.compare);
     },
     compare: function(a, b) {
       if (a.cost < b.cost) {
@@ -98,17 +104,6 @@ export default {
       }
       return 0;
     }
-  },
-  created() {
-    db.collection("champions")
-      .get()
-      .then(championsQuerySnapshot => {
-        championsQuerySnapshot.forEach(championDoc => {
-          const champion = championDoc.data();
-          champion.name = championDoc.id;
-          this.availableChampions.push(champion);
-        });
-      });
   }
 };
 </script>
@@ -132,25 +127,25 @@ export default {
   height: 60px;
 }
 .champion-thumbnail-image-container-5-cost {
-    background: #F9CE69;
+  background: #f9ce69;
 }
 .champion-thumbnail-image-container-4-cost {
-    background: #601E79;
+  background: #601e79;
 }
 .champion-thumbnail-image-container-3-cost {
-    background: #4A9FE0;
+  background: #4a9fe0;
 }
 .champion-thumbnail-image-container-2-cost {
-    background: #1e9539;
+  background: #1e9539;
 }
 .champion-thumbnail-image-container-1-cost {
-    background: #ffffff;
+  background: #ffffff;
 }
 .champion-thumbnail-image {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 54px;
-    height: 54px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 54px;
+  height: 54px;
 }
 </style>
