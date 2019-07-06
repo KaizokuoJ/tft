@@ -2,11 +2,7 @@
   <div>
     <b-row>
       <b-col md="6" offset="2" class="my-5">
-        <b-form-group
-          label-cols-sm="3"
-          label="AddChampionToChampionList"
-          class="mb-0"
-        >
+        <b-form-group label-cols-sm="3" class="mb-0">
           <b-input-group>
             <b-form-input
               @keyup.enter="
@@ -85,7 +81,9 @@ export default {
       let teamCompositionShouldBeRendered = false;
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
         const selectedChampion = this.selectedChampions[i];
-        teamCompositionShouldBeRendered = teamComposition.championNames.includes(selectedChampion);
+        teamCompositionShouldBeRendered = teamComposition.championNames.includes(
+          selectedChampion
+        );
         if (!teamCompositionShouldBeRendered) return false;
       }
       return teamCompositionShouldBeRendered;
