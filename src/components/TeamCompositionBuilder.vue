@@ -1,44 +1,33 @@
 <template>
   <div>
     <b-row>
-      <b-col md="9" offset="2" class="my-5">
-        <b-form-group label-cols-sm="3" class="mb-0">
+      <b-col sm="6" offset="3" class="my-5">
+        <b-form-group class="mb-0">
           <b-input-group>
-            <!--            <b-form-input-->
-            <!--              @keyup.enter="-->
-            <!--                addChampionToSelectedChampions(championNameFromInput)-->
-            <!--              "-->
-            <!--              v-model="championNameFromInput"-->
-            <!--              placeholder="Enter a champion name"-->
-            <!--            >-->
-            <!--            </b-form-input>-->
-            <VueSimpleSuggest
+            <b-form-input
+              max="5"
+              list="championNamesList"
+              @keyup.enter="
+                addChampionToSelectedChampions(championNameFromInput)
+              "
               v-model="championNameFromInput"
-              :list="availableChampionsNameSuggestions"
-              :prevent-submit="false"
-              :filter-by-query="true"
-              ref="simpleSuggestRef"
+              placeholder="Enter a champion name"
             >
-              <input
-                @keyup.enter="
-                  addChampionToSelectedChampions(championNameFromInput)
-                "
-                type="text"
-              />
-            </VueSimpleSuggest>
-            <button
-              class="autosuggest__add-champion-button btn btn-primary"
-              @click="addChampionToSelectedChampions(championNameFromInput)"
-            >
-              Add Champion
-            </button>
-            <!--            <b-input-group-append>-->
-            <!--              <b-button-->
-            <!--                :disabled="!championNameFromInput"-->
-            <!--                @click="addChampionToSelectedChampions(championNameFromInput)"-->
-            <!--                >Add-->
-            <!--              </b-button>-->
-            <!--            </b-input-group-append>-->
+            </b-form-input>
+
+            <datalist id="championNamesList">
+              <option v-for="champion in availableChampionsNameSuggestions">{{
+                champion
+              }}</option>
+            </datalist>
+            <b-input-group-append>
+              <b-button
+                variant="primary"
+                :disabled="!championNameFromInput"
+                @click="addChampionToSelectedChampions(championNameFromInput)"
+                >Add Champion
+              </b-button>
+            </b-input-group-append>
           </b-input-group>
         </b-form-group>
       </b-col>
@@ -76,8 +65,6 @@
 <script>
 import db from "../firebaseConfig";
 import TeamCompositionsTable from "./TeamCompositionsTable";
-import VueSimpleSuggest from "vue-simple-suggest";
-import "vue-simple-suggest/dist/styles.css";
 
 export default {
   data() {
@@ -105,8 +92,7 @@ export default {
   },
 
   components: {
-    TeamCompositionsTable,
-    VueSimpleSuggest
+    TeamCompositionsTable
   },
 
   methods: {
@@ -123,9 +109,8 @@ export default {
     },
 
     addChampionToSelectedChampions(championName) {
-      this.championNameFromInput = "";
-      this.$refs.simpleSuggestRef.setText('');
       this.selectedChampions.push(championName);
+      this.championNameFromInput = "";
     },
 
     removeChampionFromSelectedChampions(championName) {
