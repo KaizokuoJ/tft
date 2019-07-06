@@ -2,37 +2,52 @@
   <div class="text-white mt-5">
     <b-container>
       <b-row>
-        <b-col md="4" offset="4">
-          <b-form @submit.prevent="createTeamComposition()">
-            <b-form-group>
-              <b-form-input v-model="champions.champion1"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion2"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion3"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion4"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion5"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion6"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion7"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion8"> </b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <b-form-input v-model="champions.champion9"> </b-form-input>
-            </b-form-group>
-            <b-button type="submit">Submit</b-button>
-          </b-form>
+        <b-col md="6" offset="2" class="my-5">
+          <b-form-group
+            label-cols-sm="3"
+            label="AddChampionToChampionList"
+            class="mb-0"
+          >
+            <b-input-group>
+              <b-form-input
+                @keyup.enter="
+                  addChampionToSelectedChampions(championNameFromInput)
+                "
+                v-model="championNameFromInput"
+                placeholder="Enter a champion name"
+              >
+              </b-form-input>
+              <b-input-group-append>
+                <b-button
+                  :disabled="!championNameFromInput"
+                  @click="addChampionToSelectedChampions(championNameFromInput)"
+                  >Add
+                </b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </b-form-group>
+        </b-col>
+      </b-row>
+
+      <b-row>
+        <b-col md="8" offset="2">
+          <div class="selected-champions-display text-white mx-auto mb-3">
+            <div
+              v-for="championName in selectedChampions"
+              class="selected-champion-thumbnail-image-container selected-champion-thumbnail"
+              @click="removeChampionFromSelectedChampions(championName)"
+            >
+              <img
+                :src="getChampionThumbnailImage(championName)"
+                alt="Image of a champion that was entered in the input field"
+                class="selected-champion-thumbnail-image selected-champion-thumbnail"
+              />
+            </div>
+          </div>
+          <b-button @click="createTeamComposition">Submit</b-button>
+          <b-button @click="clearAllSelectedChampions()" class="mb-5"
+            >Clear all</b-button
+          >
         </b-col>
       </b-row>
     </b-container>
@@ -44,35 +59,15 @@ import axios from "axios";
 export default {
   data() {
     return {
-      champions: {
-        champion1: "",
-        champion2: "",
-        champion3: "",
-        champion4: "",
-        champion5: "",
-        champion6: "",
-        champion7: "",
-        champion8: "",
-        champion9: ""
-      }
+      championNameFromInput: "",
+      selectedChampions: []
     };
   },
 
   methods: {
     createTeamComposition() {
       let data = {};
-      let champions = [];
-      champions.push(this.champion1);
-      champions.push(this.champion2);
-      champions.push(this.champion3);
-      champions.push(this.champion4);
-      champions.push(this.champion5);
-      champions.push(this.champion6);
-      champions.push(this.champion7);
-      champions.push(this.champion8);
-      champions.push(this.champion9);
-
-      data.champions = champions;
+      data.champions = this.selectedChampions;
 
       axios
         .post(
@@ -81,6 +76,29 @@ export default {
         )
         .then(() => console.log("success"))
         .catch(() => console.log("error"));
+    },
+
+    addChampionToSelectedChampions(championName) {
+      this.championNameFromInput = "";
+      this.selectedChampions.push(championName);
+    },
+    clearChampionFromSelectedChampions(championName) {
+      this.selectedChampions = this.selectedChampions.filter(
+        selectedChampion => {
+          return selectedChampion !== championName;
+        }
+      );
+    },
+    clearAllSelectedChampions: function () {
+      this.selectedChampions = [];
+    },
+    getChampionThumbnailImage(championName) {
+      return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
+        championName
+      )}.png`);
+    },
+    capitalizeFirstLetter: string => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     }
   }
 };

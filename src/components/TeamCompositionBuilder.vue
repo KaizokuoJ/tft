@@ -127,7 +127,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .selected-champion-thumbnail {
   -webkit-clip-path: polygon(
     50% 6%,

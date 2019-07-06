@@ -1,5 +1,4 @@
 const admin = require("firebase-admin");
-const helpers = require("./helpers");
 const serviceAccount = require("./tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
 try {
@@ -31,6 +30,7 @@ module.exports = {
               resolve(availableChampions);
             }
           }
+          return null
         })
         .catch(error => reject(error));
     });

@@ -15,6 +15,7 @@ try {
 }
 
 module.exports = {
+
   createTeamComposition: functions.https.onRequest((req, res) => {
     cors(req, res, async () => {
       const teamCompositionChampionNames = req.body.champions;
@@ -64,11 +65,11 @@ module.exports = {
     const championsToBeAddedToComposition = [];
     teamCompositionChampionNames.forEach(teamCompositionChampionName => {
       const champion = availableChampions.find(availableChampion => {
-        return availableChampion.name === teamCompositionChampionName;
+        return availableChampion.key === teamCompositionChampionName;
       });
       championsToBeAddedToComposition.push(champion);
     });
-    return championsToBeAddedToComposition.flat();
+    return [].concat.apply([], championsToBeAddedToComposition)
   },
 
   getTeamCompositionSynergies: async teamCompositionChampions => {

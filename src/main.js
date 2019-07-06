@@ -11,6 +11,10 @@ Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
 
+window.Intercom("boot", {
+  app_id: "u877z778"
+});
+
 new Vue({
   router,
   store,

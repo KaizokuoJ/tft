@@ -26,9 +26,8 @@
             class="d-inline-block"
           >
             <img
-              :src="getChampionThumbnailImage(champion.name)"
+              :src="getChampionThumbnailImage(champion.key)"
               alt="Image of a champion that was entered in the input field"
-              class="selected-champion-thumbnail-image selected-champion-thumbnail"
             />
           </div>
         </template>
