@@ -30,6 +30,7 @@
             </b-input-group-append>
           </b-input-group>
         </b-form-group>
+          <b-alert variant="warning" @dismissed="didUserProvideIncorrectInput = false" :show="didUserProvideIncorrectInput" dismissible :fade="true" class="mt-3 w-75 mx-auto">Sorry, please try again. I couldn't process your input.</b-alert>
       </b-col>
     </b-row>
 
@@ -72,7 +73,8 @@ export default {
       availableChampions: [],
       selectedChampions: [],
       availableTeamCompositions: [],
-      championNameFromInput: ""
+      championNameFromInput: "",
+      didUserProvideIncorrectInput: false
     };
   },
 
@@ -109,8 +111,12 @@ export default {
     },
 
     addChampionToSelectedChampions(championName) {
-      this.selectedChampions.push(championName);
-      this.championNameFromInput = "";
+      if (this.availableChampionsNameSuggestions.includes(championName)) {
+        this.selectedChampions.push(championName);
+        this.championNameFromInput = "";
+      } else {
+        this.didUserProvideIncorrectInput = true;
+      }
     },
 
     removeChampionFromSelectedChampions(championName) {
@@ -186,8 +192,7 @@ export default {
   height: 65px;
 }
 
-.autosuggest__add-champion-button {
-  border-top-left-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
+.incorrect-input-alert {
+
 }
 </style>
