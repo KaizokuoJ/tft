@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="container">
-      <LandingBanner class="mb-5"></LandingBanner>
-      <TeamCompositionBuilder></TeamCompositionBuilder>
+      <LandingBanner v-if="!hasValidChampionBeenEntered" class="mb-5"></LandingBanner>
+      <TeamCompositionBuilder @validChampionHasBeenEntered="hasValidChampionBeenEntered = true"></TeamCompositionBuilder>
         <Footer class="footer"></Footer>
     </div>
   </div>
@@ -13,6 +13,11 @@ import TeamCompositionBuilder from "../components/TeamCompositionBuilder";
 import Footer from "../components/Footer";
 
 export default {
+  data() {
+    return {
+      hasValidChampionBeenEntered: false
+    }
+  },
   components: {
     LandingBanner,
     TeamCompositionBuilder,

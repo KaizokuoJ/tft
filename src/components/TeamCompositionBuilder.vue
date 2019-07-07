@@ -113,6 +113,7 @@ export default {
       if (this.availableChampionsNameSuggestions.includes(championName)) {
         this.selectedChampions.push(championName);
         this.championNameFromInput = "";
+        this.$emit('validChampionHasBeenEntered');
       } else {
         this.didUserProvideIncorrectInput = true;
       }
