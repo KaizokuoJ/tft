@@ -6,13 +6,23 @@
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
 th {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  height: 100%;
 }
 body {
+  position: relative;
+  height: 100%;
   background: #485563; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,

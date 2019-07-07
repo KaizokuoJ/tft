@@ -23,7 +23,6 @@
             <b-input-group-append>
               <b-button
                 variant="primary"
-                :disabled="!championNameFromInput"
                 @click="addChampionToSelectedChampions(championNameFromInput)"
                 >Add Champion
               </b-button>

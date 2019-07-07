@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
-    <LandingBanner class="mb-5"></LandingBanner>
-    <TeamCompositionBuilder></TeamCompositionBuilder>
-    <Footer></Footer>
+  <div>
+    <div class="container">
+      <LandingBanner class="mb-5"></LandingBanner>
+      <TeamCompositionBuilder></TeamCompositionBuilder>
+        <Footer class="footer"></Footer>
+    </div>
   </div>
 </template>
 <script>
@@ -18,3 +20,5 @@ export default {
   }
 };
 </script>
+<style>
+</style>

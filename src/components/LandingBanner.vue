@@ -3,7 +3,7 @@
     <img src="../assets/images/riverspriteEyeShadow.png" alt="" class="banner-logo" />
     <h1 class="title text-white font-weight-bold">TFT Cheat Sheets</h1>
     <h3 class="text-white">
-      Find the best team compositions based on your ingame champions
+      Find team compositions based on your current in-game champions
     </h3>
   </div>
 </template>

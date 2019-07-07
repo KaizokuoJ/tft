@@ -17,7 +17,7 @@
 
 <style>
     .footer {
-        margin-top: 10rem;
+        margin-top: 17rem;
         margin-bottom: 1rem;
     }
 </style>

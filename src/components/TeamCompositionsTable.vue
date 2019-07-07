@@ -2,6 +2,7 @@
   <b-row>
     <b-col md="10" offset="1">
       <b-table
+              v-if="selectedChampions.length !== 0"
         stacked="md"
         show-empty
         :empty-text="getTableEmptyText()"
@@ -148,4 +149,5 @@ export default {
   width: 54px;
   height: 54px;
 }
+
 </style>
