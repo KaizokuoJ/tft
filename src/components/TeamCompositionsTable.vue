@@ -1,6 +1,6 @@
 <template>
   <b-row>
-    <b-col md="10" offset="1">
+    <b-col col="12">
       <b-table
         v-if="selectedChampions.length !== 0"
         stacked="md"
