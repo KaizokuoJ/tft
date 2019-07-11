@@ -10,9 +10,7 @@
           >
             <b-input-group>
               <b-form-input
-                @keyup.enter="
-                  addChampionToSelectedChampions(championNameFromInput)
-                "
+                @keyup.enter="addChampionToSelectedChampions()"
                 v-model="championNameFromInput"
                 placeholder="Enter a champion name"
               >
@@ -20,7 +18,7 @@
               <b-input-group-append>
                 <b-button
                   :disabled="!championNameFromInput"
-                  @click="addChampionToSelectedChampions(championNameFromInput)"
+                  @click="addChampionToSelectedChampions()"
                   >Add
                 </b-button>
               </b-input-group-append>
@@ -35,7 +33,7 @@
             <div
               v-for="championName in selectedChampions"
               class="selected-champion-thumbnail-image-container selected-champion-thumbnail"
-              @click="removeChampionFromSelectedChampions(championName)"
+              @click="clearChampionFromSelectedChampions(championName)"
             >
               <img
                 :src="getChampionThumbnailImage(championName)"
@@ -60,7 +58,8 @@ export default {
   data() {
     return {
       championNameFromInput: "",
-      selectedChampions: []
+      selectedChampions: [],
+      selectedChampionItems: {}
     };
   },
 
@@ -68,20 +67,26 @@ export default {
     createTeamComposition() {
       let data = {};
       data.champions = this.selectedChampions;
+      data.championItems = this.selectedChampionItems;
 
       axios
         .post(
           "https://us-central1-tft-cheatsheets.cloudfunctions.net/createTeamComposition",
           data
         )
-        .then(() => console.log("success"))
+        .then(() => {
+          this.selectedChampions = [];
+          this.selectedChampionItems = {};
+          console.log("success");
+        })
         .catch(() => console.log("error"));
     },
 
-    addChampionToSelectedChampions(championName) {
+    addChampionToSelectedChampions() {
+      this.selectedChampions.push(this.championNameFromInput);
       this.championNameFromInput = "";
-      this.selectedChampions.push(championName);
     },
+
     clearChampionFromSelectedChampions(championName) {
       this.selectedChampions = this.selectedChampions.filter(
         selectedChampion => {
@@ -89,14 +94,17 @@ export default {
         }
       );
     },
-    clearAllSelectedChampions: function () {
+
+    clearAllSelectedChampions: function() {
       this.selectedChampions = [];
     },
+
     getChampionThumbnailImage(championName) {
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
         championName
       )}.png`);
     },
+
     capitalizeFirstLetter: string => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }

@@ -1,5 +1,5 @@
-const admin = require("firebase-admin");
-const serviceAccount = require("./tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
+const admin = require("firebase-admin/lib/index");
+const serviceAccount = require("../tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
 try {
   admin.initializeApp({

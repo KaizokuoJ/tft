@@ -1,7 +1,7 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
+const functions = require("firebase-functions/lib/index");
+const admin = require("firebase-admin/lib/index");
 const cors = require("cors")({ origin: true });
-const serviceAccount = require("./tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
+const serviceAccount = require("../tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
 const databaseCrud = require("./databaseCrud");
 
@@ -48,7 +48,7 @@ module.exports = {
         .getAllAvailableChampions()
         .then(availableChampions => {
           return resolve(
-            module.exports.filterSelectedChampionsFromAvailableChampions(
+            module.exports.propagateChampionsWithDatabaseChampions(
               teamCompositionChampionNames,
               availableChampions
             )
@@ -58,7 +58,7 @@ module.exports = {
     });
   },
 
-  filterSelectedChampionsFromAvailableChampions(
+  propagateChampionsWithDatabaseChampions(
     teamCompositionChampionNames,
     availableChampions
   ) {
@@ -67,6 +67,7 @@ module.exports = {
       const champion = availableChampions.find(availableChampion => {
         return availableChampion.key === teamCompositionChampionName;
       });
+      console.log(champion);
       championsToBeAddedToComposition.push(champion);
     });
     return [].concat.apply([], championsToBeAddedToComposition)

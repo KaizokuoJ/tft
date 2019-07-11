@@ -4530,3 +4530,339 @@ SyntaxError: Unexpected token (
 [debug] [2019-07-05T17:41:49.633Z] firebase-admin has been stubbed.
 [info] >  App already initialized
 [info] >  App already initialized
+[debug] [2019-07-11T14:21:00.525Z] ----------------------------------------------------------------------
+[debug] [2019-07-11T14:21:00.527Z] Command:       /usr/local/Cellar/node/11.0.0/bin/node /usr/local/bin/firebase serve
+[debug] [2019-07-11T14:21:00.527Z] CLI Version:   7.0.2
+[debug] [2019-07-11T14:21:00.527Z] Platform:      darwin
+[debug] [2019-07-11T14:21:00.527Z] Node Version:  v11.0.0
+[debug] [2019-07-11T14:21:00.528Z] Time:          Thu Jul 11 2019 16:21:00 GMT+0200 (Central European Summer Time)
+[debug] [2019-07-11T14:21:00.528Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-11T14:21:00.540Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-11T14:21:00.540Z] > authorizing via signed-in user
+[debug] [2019-07-11T14:21:00.540Z] [iam] checking project tft-cheatsheets for permissions ["firebase.projects.get"]
+[debug] [2019-07-11T14:21:00.542Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-07-11T14:21:00.542Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-07-11T14:21:00.749Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-11T14:21:00.770Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tft-cheatsheets:testIamPermissions  
+
+[debug] [2019-07-11T14:21:01.765Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-11T14:21:01.766Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tft-cheatsheets  
+ 
+[debug] [2019-07-11T14:21:02.576Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/jordy/code/KaizokuoJ/tft'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "11"
+[debug] [2019-07-11T14:21:02.589Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/559741858535/clients/_:getWebAppConfig  
+ 
+[debug] [2019-07-11T14:21:02.590Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/559741858535:getServerAppConfig  
+ 
+[debug] [2019-07-11T14:21:02.886Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-07-11T14:21:02.964Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/jordy/code/KaizokuoJ/tft/functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: dist
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-07-11T14:21:03.247Z] Functions runtime initialized.
+[debug] [2019-07-11T14:21:03.247Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:21:03.339Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[info] i  functions: HTTP trigger initialized at http://localhost:5001/tft-cheatsheets/us-central1/createTeamComposition
+[debug] [2019-07-11T14:21:20.621Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-11T14:21:20.941Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-11T14:21:20.942Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:21:20.997Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:21:21.041Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-11T14:21:21.041Z] 
+[debug] [2019-07-11T14:21:21.041Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-11T14:21:21.047Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_48433.sock"}
+[debug] [2019-07-11T14:21:21.049Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_48433.sock"}
+[debug] [2019-07-11T14:21:21.069Z] Ephemeral server used!
+[debug] [2019-07-11T14:21:21.069Z] Body{"champions": ["Shen", "Warwick", "Kayle", "Tristana", "Veigar", "Varus", "Chogath"]}
+[debug] [2019-07-11T14:21:21.467Z] Ephemeral server survived.
+[info] >  { cost: 2,
+[info] >    stats:
+[info] >     { defense: { armor: 30, health: 650, magicResist: 20 },
+[info] >       offense: { dps: 39, range: 1, damage: 65, attackSpeed: 0.6 } },
+[info] >    key: 'Shen',
+[info] >    class: [ 'Blademaster' ],
+[info] >    ability:
+[info] >     { manaStart: 50,
+[info] >       name: "Spirit's Refuge",
+[info] >       type: 'Active',
+[info] >       stats: [ { value: '3s / 4s / 5s', type: 'Zone Duration' } ],
+[info] >       description:
+[info] >        'Shen creates a zone around himself, allowing allies to dodge all attacks.',
+[info] >       manaCost: 150 },
+[info] >    origin: [ 'Ninja' ],
+[info] >    name: 'Shen' }
+[info] >  { ability:
+[info] >     { description:
+[info] >        'Warwick pounces onto the lowest health enemy, stunning and damaging them.',
+[info] >       manaCost: 150,
+[info] >       manaStart: 50,
+[info] >       name: 'Infinite Duress',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { value: '150 / 225 / 300', type: 'Damage' },
+[info] >          { type: 'Hits', value: '3' },
+[info] >          { type: 'Duration', value: '1.5s' } ] },
+[info] >    origin: [ 'Wild' ],
+[info] >    name: 'Warwick',
+[info] >    cost: 1,
+[info] >    stats:
+[info] >     { defense: { magicResist: 20, armor: 30, health: 600 },
+[info] >       offense: { dps: 30, range: 1, damage: 50, attackSpeed: 0.6 } },
+[info] >    key: 'Warwick',
+[info] >    class: [ 'Brawler' ] }
+[info] >  { ability:
+[info] >     { stats:
+[info] >        [ { value: '500 / 800 / 1100', type: 'Damage' },
+[info] >          { type: 'Shield Duration', value: '2s / 3s / 4s' },
+[info] >          { value: '0 / 1 / 2', type: 'Extra Targets' } ],
+[info] >       description: 'Kayle shields an ally, making them immune to damage.',
+[info] >       manaCost: 100,
+[info] >       manaStart: 0,
+[info] >       name: 'Divine Judgement',
+[info] >       type: 'Active' },
+[info] >    origin: [ 'Noble' ],
+[info] >    name: 'Kayle',
+[info] >    cost: 5,
+[info] >    stats:
+[info] >     { offense: { damage: 60, attackSpeed: 1.1, dps: 66, range: 3 },
+[info] >       defense: { armor: 35, health: 800, magicResist: 20 } },
+[info] >    key: 'Kayle',
+[info] >    class: [ 'Knight' ] }
+[info] >  { class: [ 'Gunslinger' ],
+[info] >    ability:
+[info] >     { description:
+[info] >        'Tristana places a bomb on her current target that detonates after 4 attacks, damaging nearby enemies.',
+[info] >       manaCost: 50,
+[info] >       manaStart: 0,
+[info] >       name: 'Explosive Charge',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Charge Damage', value: '150 / 225 / 300' },
+[info] >          { value: '4s', type: 'Charge Duration' } ] },
+[info] >    origin: [ 'Yordle' ],
+[info] >    name: 'Tristana',
+[info] >    cost: 1,
+[info] >    stats:
+[info] >     { defense: { magicResist: 20, armor: 20, health: 500 },
+[info] >       offense: { attackSpeed: 0.7, dps: 35, range: 4, damage: 50 } },
+[info] >    key: 'Tristana' }
+[info] >  { ability:
+[info] >     { manaStart: 0,
+[info] >       name: 'Primordial Burst',
+[info] >       type: 'Active',
+[info] >       stats: [ { type: 'Damage', value: '300 / 500 / 700' } ],
+[info] >       description:
+[info] >        'Veigar blasts an enemy with magical energy. This spell instantly kills if the enemy is a lower star level than Veigar.',
+[info] >       manaCost: 85 },
+[info] >    origin: [ 'Yordle' ],
+[info] >    name: 'Veigar',
+[info] >    cost: 3,
+[info] >    stats:
+[info] >     { offense: { range: 3, damage: 45, attackSpeed: 0.55, dps: 25 },
+[info] >       defense: { armor: 20, health: 450, magicResist: 20 } },
+[info] >    key: 'Veigar',
+[info] >    class: [ 'Sorcerer' ] }
+[info] >  { cost: 2,
+[info] >    stats:
+[info] >     { defense: { armor: 25, health: 500, magicResist: 20 },
+[info] >       offense: { range: 4, damage: 50, attackSpeed: 0.7, dps: 35 } },
+[info] >    key: 'Varus',
+[info] >    class: [ 'Ranger' ],
+[info] >    ability:
+[info] >     { manaCost: 75,
+[info] >       manaStart: 0,
+[info] >       name: 'Piercing Arrow',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Damage', value: '400 / 600 / 800' },
+[info] >          { value: '1.5s', type: 'Cast Time' } ],
+[info] >       description:
+[info] >        'Varus charges and fires an arrow, dealing damage to all enemies in a line.' },
+[info] >    origin: [ 'Demon' ],
+[info] >    name: 'Varus' }
+[info] >  { ability:
+[info] >     { name: 'Rupture',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Damage', value: '200 / 400 / 600' },
+[info] >          { type: 'Knockup Duration', value: '2s / 2.25s / 2.5s' },
+[info] >          { value: '3 hexes', type: 'AoE Radius' },
+[info] >          { type: 'Delay', value: '1.5s' } ],
+[info] >       description:
+[info] >        "Cho'gath ruptures an area, stunning and damaging enemies inside of it.",
+[info] >       manaCost: 150,
+[info] >       manaStart: 50 },
+[info] >    origin: [ 'Void' ],
+[info] >    name: "Cho'gath",
+[info] >    items: [ 'thornmail', 'warmogsarmor', 'dragonsclaw' ],
+[info] >    cost: 4,
+[info] >    stats:
+[info] >     { defense: { armor: 20, health: 1100, magicResist: 20 },
+[info] >       offense: { attackSpeed: 0.55, dps: 39, range: 1, damage: 70 } },
+[info] >    key: 'Chogath',
+[info] >    class: [ 'Brawler' ] }
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-11T14:23:59.505Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:24:00.855Z] Functions runtime initialized.
+[debug] [2019-07-11T14:24:00.856Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:24:00.922Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:24:27.400Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:24:28.780Z] Functions runtime initialized.
+[debug] [2019-07-11T14:24:28.781Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:24:28.855Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:24:37.530Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:24:38.830Z] Functions runtime initialized.
+[debug] [2019-07-11T14:24:38.831Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:24:38.894Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:25:11.502Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:25:12.764Z] Functions runtime initialized.
+[debug] [2019-07-11T14:25:12.765Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:25:12.823Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:25:43.128Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:25:44.385Z] Functions runtime initialized.
+[debug] [2019-07-11T14:25:44.386Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:25:44.438Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:27:17.081Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:27:18.523Z] Functions runtime initialized.
+[debug] [2019-07-11T14:27:18.524Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:27:18.599Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:27:28.915Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:27:30.215Z] Functions runtime initialized.
+[debug] [2019-07-11T14:27:30.216Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:27:30.285Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:27:41.851Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-11T14:27:42.235Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-11T14:27:42.236Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:27:42.324Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:27:42.408Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-11T14:27:42.408Z] 
+[debug] [2019-07-11T14:27:42.408Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-11T14:27:42.416Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_48715.sock"}
+[debug] [2019-07-11T14:27:42.417Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_48715.sock"}
+[debug] [2019-07-11T14:27:42.437Z] Ephemeral server used!
+[debug] [2019-07-11T14:27:42.438Z] Body{"champions": ["Shen", "Warwick", "Kayle", "Tristana", "Veigar", "Varus", "Chogath"]}
+[debug] [2019-07-11T14:27:42.803Z] Ephemeral server survived.
+[debug] [2019-07-11T14:27:56.212Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:27:57.625Z] Functions runtime initialized.
+[debug] [2019-07-11T14:27:57.627Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:27:57.742Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:28:29.351Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:28:30.655Z] Functions runtime initialized.
+[debug] [2019-07-11T14:28:30.656Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:28:30.723Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:29:14.153Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:29:15.565Z] Functions runtime initialized.
+[debug] [2019-07-11T14:29:15.566Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:29:15.646Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:29:29.690Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:29:30.951Z] Functions runtime initialized.
+[debug] [2019-07-11T14:29:30.952Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:29:31.002Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:29:37.449Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:29:38.725Z] Functions runtime initialized.
+[debug] [2019-07-11T14:29:38.726Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:29:38.785Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:30:13.353Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:30:14.766Z] Functions runtime initialized.
+[debug] [2019-07-11T14:30:14.767Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:30:14.827Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:30:30.311Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:30:31.603Z] Functions runtime initialized.
+[debug] [2019-07-11T14:30:31.604Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:30:31.672Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:31:04.501Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:31:05.861Z] Functions runtime initialized.
+[debug] [2019-07-11T14:31:05.861Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:31:05.923Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:31:35.556Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:31:36.814Z] Functions runtime initialized.
+[debug] [2019-07-11T14:31:36.815Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:31:36.865Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:31:48.598Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:31:49.828Z] Functions runtime initialized.
+[debug] [2019-07-11T14:31:49.829Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:31:49.878Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:31:54.447Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:31:55.687Z] Functions runtime initialized.
+[debug] [2019-07-11T14:31:55.688Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:31:55.736Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:32:05.062Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:32:06.417Z] Functions runtime initialized.
+[debug] [2019-07-11T14:32:06.418Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:32:06.471Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:32:27.279Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:32:28.528Z] Functions runtime initialized.
+[debug] [2019-07-11T14:32:28.529Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:32:28.573Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:32:56.702Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:32:57.967Z] Functions runtime initialized.
+[debug] [2019-07-11T14:32:57.968Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:32:58.027Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:33:58.158Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:33:59.559Z] Functions runtime initialized.
+[debug] [2019-07-11T14:33:59.560Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:33:59.652Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-11T14:34:06.952Z] File /Users/jordy/code/KaizokuoJ/tft/functions/functions/championsImport.js changed, reloading triggers
+[debug] [2019-07-11T14:34:08.415Z] Functions runtime initialized.
+[debug] [2019-07-11T14:34:08.416Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-11T14:34:08.491Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized

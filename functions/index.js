@@ -2,7 +2,7 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const serviceAccount = require("./tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
-const teamCompositions = require("./teamCompositions");
+const teamCompositions = require("./functions/teamCompositions");
 
 try {
   admin.initializeApp({
