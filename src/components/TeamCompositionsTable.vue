@@ -249,6 +249,22 @@ td > div {
   .class-or-origin-thumbnail-image {
     height: 35px;
   }
+  .champion-thumbnail-image-container {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .champion-thumbnail-image {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 44px;
+    height: 44px;
+  }
+  .item-thumbnail-image {
+    height: 36px;
+  }
   td::before {
     color: #ffffff;
     font-size: 19px;
