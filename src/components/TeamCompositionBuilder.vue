@@ -34,7 +34,7 @@
     </b-row>
 
     <b-row>
-      <b-col md="8" offset="2">
+      <b-col md="8" offset-md="2">
         <p v-if="selectedChampions.length !== 0" class="text-white text-muted">
           Click champion portraits to remove them from your composition
         </p>
