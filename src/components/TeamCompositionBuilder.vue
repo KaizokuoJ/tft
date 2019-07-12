@@ -1,7 +1,15 @@
 <template>
   <div>
     <b-row>
-      <b-col cols="10" offset="1" md="6" offset-md="3" sm="10" offset-sm="1" class="my-5">
+      <b-col
+        cols="10"
+        offset="1"
+        md="6"
+        offset-md="3"
+        sm="10"
+        offset-sm="1"
+        class="my-5"
+      >
         <b-form-group class="mb-0">
           <b-input-group>
             <b-form-input
@@ -29,7 +37,15 @@
             </b-input-group-append>
           </b-input-group>
         </b-form-group>
-          <b-alert variant="warning" @dismissed="didUserProvideIncorrectInput = false" :show="didUserProvideIncorrectInput" dismissible :fade="true" class="mt-3 w-75 mx-auto">Sorry, please try again. I couldn't process your input.</b-alert>
+        <b-alert
+          variant="warning"
+          @dismissed="didUserProvideIncorrectInput = false"
+          :show="didUserProvideIncorrectInput"
+          dismissible
+          :fade="true"
+          class="mt-3 w-75 mx-auto"
+          >Sorry, please try again. I couldn't process your input.</b-alert
+        >
       </b-col>
     </b-row>
 
@@ -110,10 +126,14 @@ export default {
     },
 
     addChampionToSelectedChampions(championName) {
-      if (this.availableChampionsNameSuggestions.includes(championName)) {
+      if (
+        this.availableChampionsNameSuggestions.includes(
+          this.capitalizeFirstLetter(championName)
+        )
+      ) {
         this.selectedChampions.push(championName);
         this.championNameFromInput = "";
-        this.$emit('validChampionHasBeenEntered');
+        this.$emit("validChampionHasBeenEntered");
       } else {
         this.didUserProvideIncorrectInput = true;
       }
@@ -193,6 +213,5 @@ export default {
 }
 
 .incorrect-input-alert {
-
 }
 </style>
