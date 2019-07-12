@@ -100,11 +100,7 @@ export default {
       });
     },
     availableChampionsNameSuggestions() {
-      const availableChampionsNames = [];
-      this.availableChampions.forEach(champion => {
-        availableChampionsNames.push(champion.name);
-      });
-      return availableChampionsNames;
+      return this.getChampionNamesFromAvailableChampions();
     }
   },
 
@@ -115,14 +111,44 @@ export default {
   methods: {
     shouldTeamCompositionBeRendered(teamComposition) {
       let teamCompositionShouldBeRendered = false;
+      const championNames = teamComposition.championNames.map(championName => {
+        return this.formatChampionNameFromAvailableChampions(championName);
+      });
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
         const selectedChampion = this.selectedChampions[i];
-        teamCompositionShouldBeRendered = teamComposition.championNames.includes(
+        teamCompositionShouldBeRendered = championNames.includes(
           selectedChampion
         );
         if (!teamCompositionShouldBeRendered) return false;
       }
       return teamCompositionShouldBeRendered;
+    },
+
+    getChampionNamesFromAvailableChampions() {
+      const availableChampionsNames = [];
+      this.availableChampions.forEach(champion => {
+        const championName = this.formatChampionNameFromAvailableChampions(
+          champion.name
+        );
+        availableChampionsNames.push(championName);
+      });
+      return availableChampionsNames;
+    },
+
+    formatChampionNameFromAvailableChampions(championName) {
+      if (championName === "AurelionSol") {
+        return "Aurelion Sol";
+      } else if (championName === "MissFortune") {
+        return "Miss Fortune";
+      } else if (championName === "Chogath") {
+        return "Cho'gath";
+      } else if (championName === "RekSai") {
+        return "Rek'sai";
+      } else if (championName === "Khazix") {
+        return "Kha'zix";
+      } else {
+        return championName;
+      }
     },
 
     addChampionToSelectedChampions(championName) {
@@ -210,8 +236,5 @@ export default {
   left: 3px;
   width: 65px;
   height: 65px;
-}
-
-.incorrect-input-alert {
 }
 </style>

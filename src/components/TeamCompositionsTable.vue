@@ -1,6 +1,6 @@
 <template>
   <b-row>
-    <b-col col="12">
+    <b-col>
       <b-table
         v-if="selectedChampions.length !== 0"
         stacked="md"
@@ -109,9 +109,10 @@ export default {
   },
   props: ["teamCompositionsToRender", "selectedChampions"],
   methods: {
-    getChampionThumbnailImage(championName) {
+    getChampionThumbnailImage(championKey) {
+      const formattedChampionName = this.formatChampionName(championKey);
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
-        championName
+        formattedChampionName
       )}.png`);
     },
     getClassOrOriginThumbnailImage(classOrOriginName) {
@@ -164,12 +165,28 @@ export default {
         return 1;
       }
       return 0;
+    },
+
+    formatChampionName(championName) {
+      if (championName === "AurelionSol") {
+        return "Aurelion Sol";
+      } else if (championName === "MissFortune") {
+        return "Miss Fortune";
+      } else if (championName === "Chogath") {
+        return "Cho'gath";
+      } else if (championName === "RekSai") {
+        return "Rek'sai";
+      } else if (championName === "Khazix") {
+        return "Kha'zix";
+      } else {
+        return championName;
+      }
     }
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 .class-or-origin-thumbnail-image {
   height: 45px;
 }
@@ -230,7 +247,20 @@ td > div {
 
 @media screen and (max-width: 768px) {
   .class-or-origin-thumbnail-image {
-      height: 35px;
+    height: 35px;
+  }
+  td::before {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 20px !important;
+  }
+  td {
+    border-bottom: 1px;
+    font-weight: bold;
+    color: #d3d3d3 !important;
+  }
+  tr > td:first-of-type > div {
+    font-size: 25px !important;
   }
 }
 </style>
