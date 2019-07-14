@@ -40,7 +40,9 @@
         <template slot="champions" slot-scope="row">
           <mq-layout mq="lg+">
             <div
-              v-for="champion in getChampionsSortedByCost(row.item.champions)"
+              v-for="(champion, index) in getChampionsSortedByCost(
+                row.item.champions
+              )"
               class="d-inline-block"
             >
               <div
@@ -55,12 +57,36 @@
               </div>
               <span class="d-block">{{ champion.name }}</span>
               <div>
-                <img
-                  v-for="item in champion.items"
-                  :src="getItemThumbnailImage(item)"
-                  alt=""
-                  class="item-thumbnail-image my-1 d-block mx-auto"
-                />
+                <div v-for="item in champion.items">
+                  <img
+                    :src="getItemThumbnailImage(item)"
+                    alt=""
+                    class="item-thumbnail-image my-1 d-block mx-auto"
+                    :id="row.index + item + champion.key"
+                  />
+                  <b-popover
+                    :content="`haha`"
+                    title=""
+                    :target="row.index + item + champion.key"
+                    placement="lefttop"
+                    triggers="hover click"
+                    variant="primary"
+                  >
+                    <template slot="title"></template>
+                    <template slot="content"
+                      >Content via Slots</template
+                    >
+                    <img
+                      :src="getItemComponentThumbnailImage(item, 0)"
+                      alt=""
+                      class="mr-3 "
+                    />
+                    <img
+                      :src="getItemComponentThumbnailImage(item, 1)"
+                      alt=""
+                    />
+                  </b-popover>
+                </div>
               </div>
             </div>
           </mq-layout>
@@ -83,12 +109,30 @@
                       class="champion-thumbnail champion-thumbnail-image"
                     />
                   </div>
-                  <img
-                    v-for="item in champion.items"
-                    :src="getItemThumbnailImage(item)"
-                    alt=""
-                    class="item-thumbnail-image pl-2"
-                  />
+
+                  <div v-for="item in champion.items">
+                    <img
+                      :src="getItemThumbnailImage(item)"
+                      alt=""
+                      class="item-thumbnail-image pl-2"
+                      :id="champion.key"
+                    />
+                    <b-popover
+                      :content="`uo`"
+                      title=""
+                      :target="champion.key"
+                      placement="lefttop"
+                      triggers="hover click"
+                    >
+                      <template slot="content"
+                        >Content via Slots</template
+                      >
+                      Embedding content
+                      <span class="text-danger">using slots</span> affords you
+                      <em>greater <strong>control.</strong></em> and basic HTML
+                      support.
+                    </b-popover>
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,6 +144,8 @@
 </template>
 
 <script>
+import db from "../firebaseConfig";
+
 export default {
   data() {
     return {
@@ -109,7 +155,9 @@ export default {
         { key: "championNames.length", label: "Team Size", sortable: true },
         { key: "synergies" },
         { key: "champions" }
-      ]
+      ],
+      itemsFromDatabase: [],
+      randomId: 0
     };
   },
   props: ["teamCompositionsToRender", "selectedChampions"],
@@ -127,6 +175,16 @@ export default {
     },
     getItemThumbnailImage(itemName) {
       return require(`@/assets/images/items/${itemName}.png`);
+    },
+    getItemComponentThumbnailImage(item, componentNumber) {
+      const itemWithInformationFromDatabase = this.itemsFromDatabase.filter(
+        itemFromDatabase => {
+          return itemFromDatabase.key === item;
+        }
+      );
+      return require(`@/assets/images/items/${
+        itemWithInformationFromDatabase[0].buildsFrom[componentNumber]
+      }.png`);
     },
     getChampionThumbnailContainerClass(champion) {
       return {
@@ -181,7 +239,7 @@ export default {
         return "A";
       } else if (tierNumber === 3) {
         return "B";
-      } else if (tierNumber === 4) {
+      } else if (tierNumber >= 4) {
         return "C";
       }
     },
@@ -201,15 +259,28 @@ export default {
         return championName;
       }
     }
+  },
+  created() {
+    db.collection("items")
+      .get()
+      .then(itemsQuerySnapshot => {
+        itemsQuerySnapshot.forEach(itemDoc => {
+          this.itemsFromDatabase.push(itemDoc.data());
+        });
+      });
   }
 };
 </script>
 
 <style lang="scss">
+    .popover-body {
+        background: #947B4A;
+    }
 .tier-number {
+  font-size: 30px;
   font-weight: bold;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 52px;
   border: 3px solid #c4ac76;
   border-radius: 50%;
 }
@@ -274,8 +345,10 @@ td > div {
 
 @media screen and (max-width: 768px) {
   .tier-number {
-      height: 40px;
-      width: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 50px;
+    width: 52px;
   }
   .class-or-origin-thumbnail-image {
     height: 35px;

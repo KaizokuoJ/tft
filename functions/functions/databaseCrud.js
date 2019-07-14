@@ -35,7 +35,7 @@ module.exports = {
         .catch(error => reject(error));
     });
   },
-  createTeamComposition: (teamCompositionChampions, teamCompositionSynergies, teamCompositionChampionNames) => {
+  createTeamComposition: (teamCompositionChampions, teamCompositionSynergies, teamCompositionChampionNames, teamCompositionTierRating) => {
     return admin
       .firestore()
       .collection("compositions")
@@ -43,6 +43,7 @@ module.exports = {
         championNames: teamCompositionChampionNames,
         champions: teamCompositionChampions,
         synergies: teamCompositionSynergies,
+        tier: teamCompositionTierRating,
         createdAt: admin.firestore.Timestamp.now()
       });
   }

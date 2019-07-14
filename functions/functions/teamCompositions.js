@@ -18,7 +18,9 @@ module.exports = {
 
   createTeamComposition: functions.https.onRequest((req, res) => {
     cors(req, res, async () => {
+      console.log(req.body);
       const teamCompositionChampionNames = req.body.champions;
+      const teamCompositionTierRating = req.body.selectedTier;
       const teamCompositionChampions = await module.exports.getTeamCompositionChampions(
         teamCompositionChampionNames
       );
@@ -30,7 +32,8 @@ module.exports = {
         .createTeamComposition(
           teamCompositionChampions,
           teamCompositionSynergies,
-          teamCompositionChampionNames
+          teamCompositionChampionNames,
+          teamCompositionTierRating
         )
         .then(response => {
           return res.status(200).send("Team Composition created");
@@ -67,7 +70,6 @@ module.exports = {
       const champion = availableChampions.find(availableChampion => {
         return availableChampion.key === teamCompositionChampionName;
       });
-      console.log(champion);
       championsToBeAddedToComposition.push(champion);
     });
     return [].concat.apply([], championsToBeAddedToComposition)

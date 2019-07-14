@@ -3,11 +3,7 @@
     <b-container>
       <b-row>
         <b-col md="6" offset="2" class="my-5">
-          <b-form-group
-            label-cols-sm="3"
-            label="AddChampionToChampionList"
-            class="mb-0"
-          >
+          <b-form-group class="mb-0 w-50">
             <b-input-group>
               <b-form-input
                 @keyup.enter="addChampionToSelectedChampions()"
@@ -23,6 +19,14 @@
                 </b-button>
               </b-input-group-append>
             </b-input-group>
+          </b-form-group>
+          <b-form-group>
+            <b-input-group class="w-25"
+              ><b-form-select
+                v-model="selectedTier"
+                :options="tierOptions"
+              ></b-form-select
+            ></b-input-group>
           </b-form-group>
         </b-col>
       </b-row>
@@ -42,10 +46,10 @@
               />
             </div>
           </div>
-          <b-button @click="createTeamComposition">Submit</b-button>
-          <b-button @click="clearAllSelectedChampions()" class="mb-5"
-            >Clear all</b-button
+          <b-button @click="createTeamComposition" class="mr-2"
+            >Submit</b-button
           >
+          <b-button @click="clearAllSelectedChampions()">Clear all</b-button>
         </b-col>
       </b-row>
     </b-container>
@@ -54,12 +58,21 @@
 
 <script>
 import axios from "axios";
+
 export default {
   data() {
     return {
       championNameFromInput: "",
       selectedChampions: [],
-      selectedChampionItems: {}
+      selectedTier: 10,
+      tierOptions: [
+        { value: null, text: "Select tier ranking" },
+        { value: 0, text: "S+" },
+        { value: 1, text: "S" },
+        { value: 2, text: "A" },
+        { value: 3, text: "B" },
+        { value: 4, text: "C" }
+      ]
     };
   },
 
@@ -67,7 +80,7 @@ export default {
     createTeamComposition() {
       let data = {};
       data.champions = this.selectedChampions;
-      data.championItems = this.selectedChampionItems;
+      data.selectedTier = this.selectedTier;
 
       axios
         .post(
@@ -83,7 +96,9 @@ export default {
     },
 
     addChampionToSelectedChampions() {
-      this.selectedChampions.push(this.championNameFromInput);
+      this.selectedChampions.push(
+        this.capitalizeFirstLetter(this.championNameFromInput)
+      );
       this.championNameFromInput = "";
     },
 

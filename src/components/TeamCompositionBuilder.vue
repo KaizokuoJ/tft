@@ -13,6 +13,7 @@
         <b-form-group class="mb-0">
           <b-input-group>
             <b-form-input
+              data-hj-whitelist
               max="5"
               list="championNamesList"
               @keyup.enter="
@@ -116,7 +117,9 @@ export default {
         return this.formatChampionNameFromAvailableChampions(championName);
       });
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
-        const selectedChampion = this.capitalizeFirstLetter(this.selectedChampions[i]);
+        const selectedChampion = this.capitalizeFirstLetter(
+          this.selectedChampions[i]
+        );
         teamCompositionShouldBeRendered = championNames.includes(
           selectedChampion
         );
