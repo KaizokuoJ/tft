@@ -65,7 +65,8 @@
               v-for="champion in getChampionsSortedByCost(row.item.champions)"
               class="d-flex justify-content-center"
             >
-              <div class="d-flex flex-column row-hl align-items-start">
+              <div class="d-flex flex-column align-items-start mb-2">
+                <div>{{ champion.name }}</div>
                 <div class="item-hl d-flex align-items-center">
                   <div
                     class="champion-thumbnail champion-thumbnail-image-container d-inline-block"
@@ -84,8 +85,6 @@
                     class="item-thumbnail-image pl-2"
                   />
                 </div>
-
-                <span class="item-hl">{{ champion.name }}</span>
               </div>
             </div>
           </mq-layout>
@@ -136,7 +135,9 @@ export default {
       if (this.selectedChampions.length === 0) {
         return "No champion entered yet";
       } else if (this.selectedChampions.length === 1) {
-        return "Sorry, I didn't implement a comp with your selected champion yet, please chat with me in the bottom right-hand corner if you have any suggestions";
+        return "Sorry, currently there are no meta compositions that include your given champion";
+      } else {
+        return "Sorry, currently there are no meta compositions that include your given champions";
       }
     },
     capitalizeFirstLetter: string => {

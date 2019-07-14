@@ -23,7 +23,7 @@ Vue.use(VueMq, {
 Vue.config.productionTip = false
 
 window.Intercom("boot", {
-  app_id: "u877z778"
+  app_id: "ywbnhge7"
 });
 
 new Vue({

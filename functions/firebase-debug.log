@@ -4866,3 +4866,311 @@ SyntaxError: Unexpected token (
 [debug] [2019-07-11T14:34:08.491Z] firebase-admin has been stubbed.
 [info] >  App already initialized
 [info] >  App already initialized
+[debug] [2019-07-13T12:16:13.093Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-13T12:16:13.616Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-13T12:16:13.622Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-13T12:16:13.714Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-13T12:16:13.807Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-13T12:16:13.807Z] 
+[debug] [2019-07-13T12:16:13.807Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-13T12:16:13.810Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_3392.sock"}
+[debug] [2019-07-13T12:16:13.819Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_3392.sock"}
+[debug] [2019-07-13T12:16:13.855Z] Ephemeral server used!
+[debug] [2019-07-13T12:16:13.857Z] Body{"champions": ["Shen", "Warwick", "Kayle", "Tristana", "Veigar", "Varus", "Chogath"]}
+[debug] [2019-07-13T12:16:14.357Z] Ephemeral server survived.
+[info] >  { ability:
+[info] >     { manaStart: 50,
+[info] >       name: "Spirit's Refuge",
+[info] >       type: 'Active',
+[info] >       stats: [ { value: '3s / 4s / 5s', type: 'Zone Duration' } ],
+[info] >       description:
+[info] >        'Shen creates a zone around himself, allowing allies to dodge all attacks.',
+[info] >       manaCost: 150 },
+[info] >    origin: [ 'Ninja' ],
+[info] >    name: 'Shen',
+[info] >    items: [ 'thornmail', 'phantomdancer', 'dragonsclaw' ],
+[info] >    cost: 2,
+[info] >    stats:
+[info] >     { defense: { magicResist: 20, armor: 30, health: 650 },
+[info] >       offense: { dps: 39, range: 1, damage: 65, attackSpeed: 0.6 } },
+[info] >    key: 'Shen',
+[info] >    class: [ 'Blademaster' ] }
+[info] >  { items: [ 'titanichydra', 'warmogsarmor', 'phantomdancer' ],
+[info] >    cost: 1,
+[info] >    stats:
+[info] >     { defense: { armor: 30, health: 600, magicResist: 20 },
+[info] >       offense: { range: 1, damage: 50, attackSpeed: 0.6, dps: 30 } },
+[info] >    key: 'Warwick',
+[info] >    class: [ 'Brawler' ],
+[info] >    ability:
+[info] >     { description:
+[info] >        'Warwick pounces onto the lowest health enemy, stunning and damaging them.',
+[info] >       manaCost: 150,
+[info] >       manaStart: 50,
+[info] >       name: 'Infinite Duress',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Damage', value: '150 / 225 / 300' },
+[info] >          { type: 'Hits', value: '3' },
+[info] >          { type: 'Duration', value: '1.5s' } ] },
+[info] >    origin: [ 'Wild' ],
+[info] >    name: 'Warwick' }
+[info] >  { cost: 5,
+[info] >    stats:
+[info] >     { offense: { range: 3, damage: 60, attackSpeed: 1.1, dps: 66 },
+[info] >       defense: { armor: 35, health: 800, magicResist: 20 } },
+[info] >    key: 'Kayle',
+[info] >    class: [ 'Knight' ],
+[info] >    ability:
+[info] >     { stats:
+[info] >        [ { value: '500 / 800 / 1100', type: 'Damage' },
+[info] >          { type: 'Shield Duration', value: '2s / 3s / 4s' },
+[info] >          { type: 'Extra Targets', value: '0 / 1 / 2' } ],
+[info] >       description: 'Kayle shields an ally, making them immune to damage.',
+[info] >       manaCost: 100,
+[info] >       manaStart: 0,
+[info] >       name: 'Divine Judgement',
+[info] >       type: 'Active' },
+[info] >    origin: [ 'Noble' ],
+[info] >    name: 'Kayle',
+[info] >    items: [ 'spearofshojin', 'guinsoosrageblade', 'seraphsembrace' ] }
+[info] >  { class: [ 'Gunslinger' ],
+[info] >    ability:
+[info] >     { manaStart: 0,
+[info] >       name: 'Explosive Charge',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Charge Damage', value: '150 / 225 / 300' },
+[info] >          { type: 'Charge Duration', value: '4s' } ],
+[info] >       description:
+[info] >        'Tristana places a bomb on her current target that detonates after 4 attacks, damaging nearby enemies.',
+[info] >       manaCost: 50 },
+[info] >    origin: [ 'Yordle' ],
+[info] >    name: 'Tristana',
+[info] >    items: [ 'titanichydra', 'runaanshurricane', 'guinsoosrageblade' ],
+[info] >    cost: 1,
+[info] >    stats:
+[info] >     { offense: { damage: 50, attackSpeed: 0.7, dps: 35, range: 4 },
+[info] >       defense: { armor: 20, health: 500, magicResist: 20 } },
+[info] >    key: 'Tristana' }
+[info] >  { ability:
+[info] >     { description:
+[info] >        'Veigar blasts an enemy with magical energy. This spell instantly kills if the enemy is a lower star level than Veigar.',
+[info] >       manaCost: 85,
+[info] >       manaStart: 0,
+[info] >       name: 'Primordial Burst',
+[info] >       type: 'Active',
+[info] >       stats: [ { type: 'Damage', value: '300 / 500 / 700' } ] },
+[info] >    origin: [ 'Yordle' ],
+[info] >    name: 'Veigar',
+[info] >    items: [ 'spearofshojin', 'rabadonsdeathcap', 'guinsoosrageblade' ],
+[info] >    cost: 3,
+[info] >    stats:
+[info] >     { offense: { dps: 25, range: 3, damage: 45, attackSpeed: 0.55 },
+[info] >       defense: { armor: 20, health: 450, magicResist: 20 } },
+[info] >    key: 'Veigar',
+[info] >    class: [ 'Sorcerer' ] }
+[info] >  { items: [ 'spearofshojin', 'rabadonsdeathcap', 'guinsoosrageblade' ],
+[info] >    cost: 2,
+[info] >    stats:
+[info] >     { defense: { armor: 25, health: 500, magicResist: 20 },
+[info] >       offense: { range: 4, damage: 50, attackSpeed: 0.7, dps: 35 } },
+[info] >    key: 'Varus',
+[info] >    class: [ 'Ranger' ],
+[info] >    ability:
+[info] >     { description:
+[info] >        'Varus charges and fires an arrow, dealing damage to all enemies in a line.',
+[info] >       manaCost: 75,
+[info] >       manaStart: 0,
+[info] >       name: 'Piercing Arrow',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { value: '400 / 600 / 800', type: 'Damage' },
+[info] >          { type: 'Cast Time', value: '1.5s' } ] },
+[info] >    origin: [ 'Demon' ],
+[info] >    name: 'Varus' }
+[info] >  { key: 'Chogath',
+[info] >    class: [ 'Brawler' ],
+[info] >    ability:
+[info] >     { type: 'Active',
+[info] >       stats:
+[info] >        [ { value: '200 / 400 / 600', type: 'Damage' },
+[info] >          { type: 'Knockup Duration', value: '2s / 2.25s / 2.5s' },
+[info] >          { type: 'AoE Radius', value: '3 hexes' },
+[info] >          { type: 'Delay', value: '1.5s' } ],
+[info] >       description:
+[info] >        "Cho'gath ruptures an area, stunning and damaging enemies inside of it.",
+[info] >       manaCost: 150,
+[info] >       manaStart: 50,
+[info] >       name: 'Rupture' },
+[info] >    origin: [ 'Void' ],
+[info] >    name: "Cho'Gath",
+[info] >    items: [ 'thornmail', 'warmogsarmor', 'dragonsclaw' ],
+[info] >    cost: 4,
+[info] >    stats:
+[info] >     { offense: { dps: 39, range: 1, damage: 70, attackSpeed: 0.55 },
+[info] >       defense: { magicResist: 20, armor: 20, health: 1100 } } }
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-13T12:16:39.453Z] Accepted request POST /tft-cheatsheets/us-central1/createTeamComposition --> createTeamComposition
+[debug] [2019-07-13T12:16:39.806Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "createTeamComposition"
+[debug] [2019-07-13T12:16:39.808Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-13T12:16:39.869Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-13T12:16:39.927Z] Trigger "createTeamComposition" has been found, beginning invocation!
+[debug] [2019-07-13T12:16:39.927Z] 
+[debug] [2019-07-13T12:16:39.928Z] Running createTeamComposition in mode HTTPS
+[debug] [2019-07-13T12:16:39.933Z] {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_3409.sock"}
+[debug] [2019-07-13T12:16:39.935Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/w5/2l1j5p3x7r38tdx4b5_cskz40000gn/T/firebase_emulator_invocation_3409.sock"}
+[debug] [2019-07-13T12:16:39.949Z] Ephemeral server used!
+[debug] [2019-07-13T12:16:39.950Z] Body{"champions": ["Shen", "Warwick", "Kayle", "Tristana", "Veigar", "Varus", "Chogath"]}
+[debug] [2019-07-13T12:16:40.255Z] Ephemeral server survived.
+[info] >  { items: [ 'thornmail', 'phantomdancer', 'dragonsclaw' ],
+[info] >    cost: 2,
+[info] >    stats:
+[info] >     { offense: { damage: 65, attackSpeed: 0.6, dps: 39, range: 1 },
+[info] >       defense: { magicResist: 20, armor: 30, health: 650 } },
+[info] >    key: 'Shen',
+[info] >    class: [ 'Blademaster' ],
+[info] >    ability:
+[info] >     { name: "Spirit's Refuge",
+[info] >       type: 'Active',
+[info] >       stats: [ { type: 'Zone Duration', value: '3s / 4s / 5s' } ],
+[info] >       description:
+[info] >        'Shen creates a zone around himself, allowing allies to dodge all attacks.',
+[info] >       manaCost: 150,
+[info] >       manaStart: 50 },
+[info] >    origin: [ 'Ninja' ],
+[info] >    name: 'Shen' }
+[info] >  { ability:
+[info] >     { stats:
+[info] >        [ { type: 'Damage', value: '150 / 225 / 300' },
+[info] >          { type: 'Hits', value: '3' },
+[info] >          { type: 'Duration', value: '1.5s' } ],
+[info] >       description:
+[info] >        'Warwick pounces onto the lowest health enemy, stunning and damaging them.',
+[info] >       manaCost: 150,
+[info] >       manaStart: 50,
+[info] >       name: 'Infinite Duress',
+[info] >       type: 'Active' },
+[info] >    origin: [ 'Wild' ],
+[info] >    name: 'Warwick',
+[info] >    items: [ 'titanichydra', 'warmogsarmor', 'phantomdancer' ],
+[info] >    cost: 1,
+[info] >    stats:
+[info] >     { defense: { magicResist: 20, armor: 30, health: 600 },
+[info] >       offense: { range: 1, damage: 50, attackSpeed: 0.6, dps: 30 } },
+[info] >    key: 'Warwick',
+[info] >    class: [ 'Brawler' ] }
+[info] >  { cost: 5,
+[info] >    stats:
+[info] >     { defense: { armor: 35, health: 800, magicResist: 20 },
+[info] >       offense: { damage: 60, attackSpeed: 1.1, dps: 66, range: 3 } },
+[info] >    key: 'Kayle',
+[info] >    class: [ 'Knight' ],
+[info] >    ability:
+[info] >     { name: 'Divine Judgement',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Damage', value: '500 / 800 / 1100' },
+[info] >          { type: 'Shield Duration', value: '2s / 3s / 4s' },
+[info] >          { type: 'Extra Targets', value: '0 / 1 / 2' } ],
+[info] >       description: 'Kayle shields an ally, making them immune to damage.',
+[info] >       manaCost: 100,
+[info] >       manaStart: 0 },
+[info] >    origin: [ 'Noble' ],
+[info] >    name: 'Kayle',
+[info] >    items: [ 'spearofshojin', 'guinsoosrageblade', 'seraphsembrace' ] }
+[info] >  { ability:
+[info] >     { manaCost: 50,
+[info] >       manaStart: 0,
+[info] >       name: 'Explosive Charge',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { value: '150 / 225 / 300', type: 'Charge Damage' },
+[info] >          { type: 'Charge Duration', value: '4s' } ],
+[info] >       description:
+[info] >        'Tristana places a bomb on her current target that detonates after 4 attacks, damaging nearby enemies.' },
+[info] >    origin: [ 'Yordle' ],
+[info] >    name: 'Tristana',
+[info] >    items: [ 'titanichydra', 'runaanshurricane', 'guinsoosrageblade' ],
+[info] >    cost: 1,
+[info] >    stats:
+[info] >     { offense: { damage: 50, attackSpeed: 0.7, dps: 35, range: 4 },
+[info] >       defense: { magicResist: 20, armor: 20, health: 500 } },
+[info] >    key: 'Tristana',
+[info] >    class: [ 'Gunslinger' ] }
+[info] >  { key: 'Veigar',
+[info] >    class: [ 'Sorcerer' ],
+[info] >    ability:
+[info] >     { stats: [ { type: 'Damage', value: '300 / 500 / 700' } ],
+[info] >       description:
+[info] >        'Veigar blasts an enemy with magical energy. This spell instantly kills if the enemy is a lower star level than Veigar.',
+[info] >       manaCost: 85,
+[info] >       manaStart: 0,
+[info] >       name: 'Primordial Burst',
+[info] >       type: 'Active' },
+[info] >    origin: [ 'Yordle' ],
+[info] >    name: 'Veigar',
+[info] >    items: [ 'spearofshojin', 'rabadonsdeathcap', 'guinsoosrageblade' ],
+[info] >    cost: 3,
+[info] >    stats:
+[info] >     { defense: { magicResist: 20, armor: 20, health: 450 },
+[info] >       offense: { range: 3, damage: 45, attackSpeed: 0.55, dps: 25 } } }
+[info] >  { class: [ 'Ranger' ],
+[info] >    ability:
+[info] >     { name: 'Piercing Arrow',
+[info] >       type: 'Active',
+[info] >       stats:
+[info] >        [ { type: 'Damage', value: '400 / 600 / 800' },
+[info] >          { type: 'Cast Time', value: '1.5s' } ],
+[info] >       description:
+[info] >        'Varus charges and fires an arrow, dealing damage to all enemies in a line.',
+[info] >       manaCost: 75,
+[info] >       manaStart: 0 },
+[info] >    origin: [ 'Demon' ],
+[info] >    name: 'Varus',
+[info] >    items: [ 'spearofshojin', 'rabadonsdeathcap', 'guinsoosrageblade' ],
+[info] >    cost: 2,
+[info] >    stats:
+[info] >     { offense: { dps: 35, range: 4, damage: 50, attackSpeed: 0.7 },
+[info] >       defense: { magicResist: 20, armor: 25, health: 500 } },
+[info] >    key: 'Varus' }
+[info] >  { items: [ 'thornmail', 'warmogsarmor', 'dragonsclaw' ],
+[info] >    cost: 4,
+[info] >    stats:
+[info] >     { offense: { dps: 39, range: 1, damage: 70, attackSpeed: 0.55 },
+[info] >       defense: { magicResist: 20, armor: 20, health: 1100 } },
+[info] >    key: 'Chogath',
+[info] >    class: [ 'Brawler' ],
+[info] >    ability:
+[info] >     { stats:
+[info] >        [ { value: '200 / 400 / 600', type: 'Damage' },
+[info] >          { value: '2s / 2.25s / 2.5s', type: 'Knockup Duration' },
+[info] >          { type: 'AoE Radius', value: '3 hexes' },
+[info] >          { type: 'Delay', value: '1.5s' } ],
+[info] >       description:
+[info] >        "Cho'gath ruptures an area, stunning and damaging enemies inside of it.",
+[info] >       manaCost: 150,
+[info] >       manaStart: 50,
+[info] >       name: 'Rupture',
+[info] >       type: 'Active' },
+[info] >    origin: [ 'Void' ],
+[info] >    name: "Cho'Gath" }
+[info] i  functions: Finished "createTeamComposition" in ~1s
+[debug] [2019-07-13T12:22:39.278Z] File /Users/jordy/code/KaizokuoJ/tft/functions/index.js changed, reloading triggers
+[debug] [2019-07-13T12:22:40.753Z] Functions runtime initialized.
+[debug] [2019-07-13T12:22:40.754Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-13T12:22:40.852Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized
+[debug] [2019-07-13T16:48:08.716Z] File /Users/jordy/code/KaizokuoJ/tft/functions/index.js changed, reloading triggers
+[debug] [2019-07-13T16:48:10.245Z] Functions runtime initialized.
+[debug] [2019-07-13T16:48:10.245Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-07-13T16:48:10.343Z] firebase-admin has been stubbed.
+[info] >  App already initialized
+[info] >  App already initialized

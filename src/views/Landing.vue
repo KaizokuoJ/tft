@@ -1,9 +1,14 @@
 <template>
-  <div>
+  <div class="test">
     <div class="container">
-      <LandingBanner v-if="!hasValidChampionBeenEntered" class="mb-5"></LandingBanner>
-      <TeamCompositionBuilder @validChampionHasBeenEntered="hasValidChampionBeenEntered = true"></TeamCompositionBuilder>
-        <Footer class="footer"></Footer>
+      <LandingBanner
+        v-if="!hasValidChampionBeenEntered"
+        class="mb-5"
+      ></LandingBanner>
+      <TeamCompositionBuilder
+        @validChampionHasBeenEntered="hasValidChampionBeenEntered = true"
+      ></TeamCompositionBuilder>
+      <Footer :hasValidChampionBeenEntered="hasValidChampionBeenEntered" class="footer"></Footer>
     </div>
   </div>
 </template>
@@ -16,7 +21,7 @@ export default {
   data() {
     return {
       hasValidChampionBeenEntered: false
-    }
+    };
   },
   components: {
     LandingBanner,

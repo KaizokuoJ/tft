@@ -74,6 +74,7 @@
       :teamCompositionsToRender="getTeamCompositionsToRender"
       :selectedChampions="selectedChampions"
       :availableChampions="availableChampions"
+      class="team-comp-table"
     ></TeamCompositionsTable>
   </div>
 </template>
@@ -115,7 +116,7 @@ export default {
         return this.formatChampionNameFromAvailableChampions(championName);
       });
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
-        const selectedChampion = this.selectedChampions[i];
+        const selectedChampion = this.capitalizeFirstLetter(this.selectedChampions[i]);
         teamCompositionShouldBeRendered = championNames.includes(
           selectedChampion
         );

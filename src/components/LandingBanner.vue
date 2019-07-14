@@ -8,7 +8,7 @@
       />
       <h1 class="title text-white font-weight-bold">TFT Cheat Sheets</h1>
       <h3 class="text-white">
-        Find team compositions based on your current in-game champions
+        Find meta team compositions based on your current in-game champions
       </h3> </mq-layout
     >
     <mq-layout :mq="['sm', 'md']">
@@ -19,7 +19,7 @@
       />
       <h1 class="sm-md-title text-white font-weight-bold">TFT Cheat Sheets</h1>
       <h6 class="text-white">
-        Find team compositions based on your current in-game champions
+        Find meta team compositions based on your current in-game champions
       </h6>
     </mq-layout>
   </div>
