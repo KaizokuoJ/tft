@@ -9,8 +9,13 @@
         :items="teamCompositionsToRender"
         :fields="teamCompositionsToRenderFields"
         class="text-white"
-        sort-by="championNames.length"
+        sort-by="tier"
       >
+        <template slot="tier" slot-scope="row">
+          <div class="tier-number mx-auto">
+            {{ convertTierNumberToLetter(row.item.tier) }}
+          </div>
+        </template>
         <template slot="synergies" slot-scope="row">
           <div
             v-for="synergy in getSynergiesSorted(row.item.synergies)"
@@ -100,6 +105,7 @@ export default {
     return {
       availableChampions: [],
       teamCompositionsToRenderFields: [
+        { key: "tier", sortable: true },
         { key: "championNames.length", label: "Team Size", sortable: true },
         { key: "synergies" },
         { key: "champions" }
@@ -168,6 +174,18 @@ export default {
       return 0;
     },
 
+    convertTierNumberToLetter: function(tierNumber) {
+      if (tierNumber === 1) {
+        return "S";
+      } else if (tierNumber === 2) {
+        return "A";
+      } else if (tierNumber === 3) {
+        return "B";
+      } else if (tierNumber === 4) {
+        return "C";
+      }
+    },
+
     formatChampionName(championName) {
       if (championName === "AurelionSol") {
         return "Aurelion Sol";
@@ -188,6 +206,14 @@ export default {
 </script>
 
 <style lang="scss">
+.tier-number {
+  font-weight: bold;
+  height: 30px;
+  width: 30px;
+  border: 3px solid #c4ac76;
+  border-radius: 50%;
+}
+
 .class-or-origin-thumbnail-image {
   height: 45px;
 }
@@ -247,6 +273,10 @@ td > div {
 }
 
 @media screen and (max-width: 768px) {
+  .tier-number {
+      height: 40px;
+      width: 40px;
+  }
   .class-or-origin-thumbnail-image {
     height: 35px;
   }
