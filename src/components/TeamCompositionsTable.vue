@@ -67,7 +67,7 @@
             >
               <div class="d-flex flex-column align-items-start mb-2">
                 <div>{{ champion.name }}</div>
-                <div class="item-hl d-flex align-items-center">
+                <div class="item-hl d-flex align-items-center border-bottom">
                   <div
                     class="champion-thumbnail champion-thumbnail-image-container d-inline-block"
                     :class="getChampionThumbnailContainerClass(champion)"
