@@ -45,7 +45,11 @@ module.exports = {
         synergies: teamCompositionSynergies,
         tier: teamCompositionTierRating,
         createdAt: admin.firestore.Timestamp.now()
+      })
+      .then(compositionDocument => {
+        return admin.firestore().collection('compositions').doc(compositionDocument.id).update({
+          id: compositionDocument.id
+        })
       });
   }
-
 };

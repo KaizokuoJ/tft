@@ -65,17 +65,12 @@
                     :id="row.index + item + champion.key"
                   />
                   <b-popover
-                    :content="`haha`"
                     title=""
                     :target="row.index + item + champion.key"
                     placement="lefttop"
                     triggers="hover click"
                     variant="primary"
                   >
-                    <template slot="title"></template>
-                    <template slot="content"
-                      >Content via Slots</template
-                    >
                     <img
                       :src="getItemComponentThumbnailImage(item, 0)"
                       alt=""
@@ -111,30 +106,42 @@
                   </div>
 
                   <div v-for="item in champion.items">
+                    <b-popover
+                      title=""
+                      :target="row.index + item + champion.key + 'lol'"
+                      :ref="row.index + item + champion.key"
+                      placement="lefttop"
+                      triggers="hover click"
+                      variant="primary"
+                    >
+                      <template slot="title"></template>
+                      <template
+                        slot="content"
+                        @click="
+                          onMobileItemThumbnailImageClick(
+                            row.index + item + champion.key
+                          )
+                        "
+                        >Content via Slots</template
+                      >
+                    </b-popover>
                     <img
                       :src="getItemThumbnailImage(item)"
                       alt=""
                       class="item-thumbnail-image pl-2"
-                      :id="champion.key"
+                      :id="row.index + item + champion.key + 'lol'"
                     />
-                    <b-popover
-                      :content="`uo`"
-                      title=""
-                      :target="champion.key"
-                      placement="lefttop"
-                      triggers="hover click"
-                    >
-                      <template slot="content"
-                        >Content via Slots</template
-                      >
-                      Embedding content
-                      <span class="text-danger">using slots</span> affords you
-                      <em>greater <strong>control.</strong></em> and basic HTML
-                      support.
-                    </b-popover>
                   </div>
                 </div>
               </div>
+            </div>
+            <div>
+              <img
+                :src="getFirstItemComponentThumbnailImage"
+                alt=""
+                class="mr-3 "
+              />
+              <img :src="getLastItemComponentThumbnailImage(1)" alt="" />
             </div>
           </mq-layout>
         </template>
@@ -157,11 +164,22 @@ export default {
         { key: "champions" }
       ],
       itemsFromDatabase: [],
-      randomId: 0
+      randomId: 0,
+      selectedItem: ""
     };
   },
   props: ["teamCompositionsToRender", "selectedChampions"],
+
   methods: {
+    getChampionThumbnailContainerClass(champion) {
+      return {
+        "champion-thumbnail-image-container-5-cost": champion.cost === 5,
+        "champion-thumbnail-image-container-4-cost": champion.cost === 4,
+        "champion-thumbnail-image-container-3-cost": champion.cost === 3,
+        "champion-thumbnail-image-container-2-cost": champion.cost === 2,
+        "champion-thumbnail-image-container-1-cost": champion.cost === 1
+      };
+    },
     getChampionThumbnailImage(championKey) {
       const formattedChampionName = this.formatChampionName(championKey);
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
@@ -176,24 +194,20 @@ export default {
     getItemThumbnailImage(itemName) {
       return require(`@/assets/images/items/${itemName}.png`);
     },
-    getItemComponentThumbnailImage(item, componentNumber) {
+    onMobileItemThumbnailImageClick: function(refName) {
+      console.log(refName);
+      console.log(this.$refs.refName);
+      this.$refs.refName.$emit("close");
+    },
+    getItemComponentThumbnailImage(componentNumber) {
       const itemWithInformationFromDatabase = this.itemsFromDatabase.filter(
         itemFromDatabase => {
-          return itemFromDatabase.key === item;
+          return itemFromDatabase.key === this.selectedItem;
         }
       );
       return require(`@/assets/images/items/${
         itemWithInformationFromDatabase[0].buildsFrom[componentNumber]
       }.png`);
-    },
-    getChampionThumbnailContainerClass(champion) {
-      return {
-        "champion-thumbnail-image-container-5-cost": champion.cost === 5,
-        "champion-thumbnail-image-container-4-cost": champion.cost === 4,
-        "champion-thumbnail-image-container-3-cost": champion.cost === 3,
-        "champion-thumbnail-image-container-2-cost": champion.cost === 2,
-        "champion-thumbnail-image-container-1-cost": champion.cost === 1
-      };
     },
     getTableEmptyText() {
       if (this.selectedChampions.length === 0) {
@@ -273,9 +287,9 @@ export default {
 </script>
 
 <style lang="scss">
-    .popover-body {
-        background: #947B4A;
-    }
+.popover-body {
+  background: #947b4a;
+}
 .tier-number {
   font-size: 30px;
   font-weight: bold;
@@ -329,6 +343,12 @@ export default {
 }
 .item-thumbnail-image {
   height: 40px;
+  transition: 0.25s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 td {
