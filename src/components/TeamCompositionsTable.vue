@@ -72,7 +72,8 @@
                     variant="primary"
                   >
                     <img
-                      :src="getItemComponentThumbnailImage(item, 0)"
+                      :src="
+                      getItemComponentThumbnailImage(item, 0)"
                       alt=""
                       class="mr-3 "
                     />
@@ -135,14 +136,6 @@
                 </div>
               </div>
             </div>
-            <div>
-              <img
-                :src="getFirstItemComponentThumbnailImage"
-                alt=""
-                class="mr-3 "
-              />
-              <img :src="getLastItemComponentThumbnailImage(1)" alt="" />
-            </div>
           </mq-layout>
         </template>
       </b-table>
@@ -182,6 +175,7 @@ export default {
     },
     getChampionThumbnailImage(championKey) {
       const formattedChampionName = this.formatChampionName(championKey);
+      console.log(formattedChampionName)
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
         formattedChampionName
       )}.png`);
@@ -199,10 +193,10 @@ export default {
       console.log(this.$refs.refName);
       this.$refs.refName.$emit("close");
     },
-    getItemComponentThumbnailImage(componentNumber) {
+    getItemComponentThumbnailImage(item, componentNumber) {
       const itemWithInformationFromDatabase = this.itemsFromDatabase.filter(
         itemFromDatabase => {
-          return itemFromDatabase.key === this.selectedItem;
+          return itemFromDatabase.key === item;
         }
       );
       return require(`@/assets/images/items/${

@@ -114,7 +114,7 @@ export default {
     shouldTeamCompositionBeRendered(teamComposition) {
       let teamCompositionShouldBeRendered = false;
       const championNames = teamComposition.championNames.map(championName => {
-        return this.formatChampionNameFromAvailableChampions(championName);
+        return this.formatChampionForNameHumanReadability(championName);
       });
       for (let i = 0, len = this.selectedChampions.length; i < len; i++) {
         const selectedChampion = this.capitalizeFirstLetter(
@@ -131,7 +131,7 @@ export default {
     getChampionNamesFromAvailableChampions() {
       const availableChampionsNames = [];
       this.availableChampions.forEach(champion => {
-        const championName = this.formatChampionNameFromAvailableChampions(
+        const championName = this.formatChampionForNameHumanReadability(
           champion.name
         );
         availableChampionsNames.push(championName);
@@ -139,7 +139,7 @@ export default {
       return availableChampionsNames;
     },
 
-    formatChampionNameFromAvailableChampions(championName) {
+    formatChampionForNameHumanReadability(championName) {
       if (championName === "AurelionSol") {
         return "Aurelion Sol";
       } else if (championName === "MissFortune") {
@@ -147,6 +147,7 @@ export default {
       } else if (championName === "Chogath") {
         return "Cho'gath";
       } else if (championName === "RekSai") {
+        console.log("yo");
         return "Rek'sai";
       } else if (championName === "Khazix") {
         return "Kha'zix";

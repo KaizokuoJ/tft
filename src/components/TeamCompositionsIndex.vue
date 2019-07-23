@@ -8,7 +8,6 @@
           :items="teamCompositionsFromDatabase"
           :fields="teamCompositionsTableFields"
           class="text-white"
-          sort-by="tier"
         >
           <template slot="tier" slot-scope="row">
             <div class="tier-number mx-auto">
@@ -127,19 +126,6 @@ export default {
         classOrOriginName
       )}.png`);
     },
-    getItemThumbnailImage(itemName) {
-      return require(`@/assets/images/items/${itemName}.png`);
-    },
-    getItemComponentThumbnailImage(componentNumber) {
-      const itemWithInformationFromDatabase = this.itemsFromDatabase.filter(
-        itemFromDatabase => {
-          return itemFromDatabase.key === this.selectedItem;
-        }
-      );
-      return require(`@/assets/images/items/${
-        itemWithInformationFromDatabase[0].buildsFrom[componentNumber]
-      }.png`);
-    },
     capitalizeFirstLetter: string => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     },
@@ -150,7 +136,9 @@ export default {
       return champions.slice().sort(this.compareChampionCost);
     },
     deleteTeamCompositionFromDatabase (docId) {
-      db.collection('compositions')
+      db.collection('compositions').doc(docId).delete()
+        .then(() => console.log('success'))
+        .catch(err => console.log(err))
     },
     compareChampionCost: function(a, b) {
       if (a.cost < b.cost) {

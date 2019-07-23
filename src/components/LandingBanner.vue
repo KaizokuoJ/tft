@@ -1,9 +1,10 @@
 <template>
   <div>
-    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>
-      New stuff: 1. Tier list column 2. Composition results are ordered by tier
-      ranking. 3. Added more compositions
-    </b-alert>
+<!--    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>-->
+<!--      The highest tier comps have been updated to reflect the new patch meta and-->
+<!--      can now be used to rank. I'll be on top of keeping it up to date as the-->
+<!--      meta continues to evolve on a daily basis.-->
+<!--    </b-alert>-->
     <mq-layout mq="lg+">
       <img
         src="../assets/images/riverspriteEyeShadow.png"
