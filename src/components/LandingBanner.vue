@@ -1,10 +1,9 @@
 <template>
   <div>
-<!--    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>-->
-<!--      The highest tier comps have been updated to reflect the new patch meta and-->
-<!--      can now be used to rank. I'll be on top of keeping it up to date as the-->
-<!--      meta continues to evolve on a daily basis.-->
-<!--    </b-alert>-->
+    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>
+      Unfortunately I can't update the meta compositions to account for this weeks' patch until Friday. I've been on a holiday
+        and I'll be working on improving the website again once I return :) Enjoy the new patch!
+    </b-alert>
     <mq-layout mq="lg+">
       <img
         src="../assets/images/riverspriteEyeShadow.png"
@@ -34,7 +33,7 @@
 export default {
   data() {
     return {
-      showDismissibleAlert: false
+      showDismissibleAlert: true
     };
   }
 };
