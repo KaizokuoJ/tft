@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>
-      Unfortunately I can't update the meta compositions to account for this weeks' patch until Friday. I've been on a holiday
-        and I'll be working on improving the website again once I return :) Enjoy the new patch!
-    </b-alert>
+<!--    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>-->
+<!--      Unfortunately, I can't update the meta compositions to account for this weeks' side-patch until Friday. I've been on a holiday.-->
+<!--        Once I return, I'll be working on improving the website, and on a new item-based feature! :) Also I'll finally add Twisted Fate.-->
+<!--    </b-alert>-->
     <mq-layout mq="lg+">
       <img
         src="../assets/images/riverspriteEyeShadow.png"
@@ -33,7 +33,7 @@
 export default {
   data() {
     return {
-      showDismissibleAlert: true
+      showDismissibleAlert: false
     };
   }
 };
