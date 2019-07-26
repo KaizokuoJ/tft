@@ -5,7 +5,12 @@
     </p>
     <b-form-group>
       <b-input-group>
-        <b-form-input placeholder="Enter email" v-model="email" @keyup.enter="submitEmailToEmailList()"> </b-form-input>
+        <b-form-input
+          placeholder="Enter email"
+          v-model="email"
+          @keyup.enter="submitEmailToEmailList()"
+        >
+        </b-form-input>
         <b-input-group-append>
           <b-button @click="submitEmailToEmailList()">Submit </b-button>
         </b-input-group-append>
