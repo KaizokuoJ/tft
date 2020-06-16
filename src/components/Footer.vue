@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .footer {
   margin-top: 8rem;
   margin-bottom: 1rem;

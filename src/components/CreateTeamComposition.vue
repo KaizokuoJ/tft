@@ -81,7 +81,6 @@ export default {
       let data = {};
       data.champions = this.selectedChampions;
       data.selectedTier = this.selectedTier;
-
       axios
         .post(
           "https://us-central1-tft-cheatsheets.cloudfunctions.net/createTeamComposition",

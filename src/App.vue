@@ -14,12 +14,15 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
+
 th {
   font-family: "Montserrat", sans-serif;
 }
+
 html {
   height: 100%;
 }
+
 body {
   position: relative;
   height: 100%;
@@ -35,6 +38,7 @@ body {
     #485563
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,6 +46,7 @@ body {
   text-align: center;
   color: #2c3e50;
 }
+
 #nav {
   padding: 30px;
   a {

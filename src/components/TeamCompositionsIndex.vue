@@ -199,7 +199,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .popover-body {
   background: #947b4a;
 }
