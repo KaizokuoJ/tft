@@ -8,14 +8,14 @@
       <TeamCompositionBuilder
         @validChampionHasBeenEntered="hasValidChampionBeenEntered = true"
       ></TeamCompositionBuilder>
-      <Footer :hasValidChampionBeenEntered="hasValidChampionBeenEntered" class="footer"></Footer>
+      <FooterLayout :hasValidChampionBeenEntered="hasValidChampionBeenEntered" class="footer"></Footer>
     </div>
   </div>
 </template>
 <script>
 import LandingBanner from "../components/LandingBanner.vue";
 import TeamCompositionBuilder from "../components/TeamCompositionBuilder";
-import Footer from "../components/Footer";
+import FooterLayout from "../components/FooterLayout";
 
 export default {
   data() {
@@ -26,7 +26,7 @@ export default {
   components: {
     LandingBanner,
     TeamCompositionBuilder,
-    Footer
+    FooterLayout
   }
 };
 </script>
