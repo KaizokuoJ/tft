@@ -25,9 +25,11 @@
             </b-form-input>
 
             <datalist id="championNamesList">
-              <option v-for="champion in availableChampionsNameSuggestions">{{
-                champion
-              }}</option>
+              <option
+                v-for="champion in availableChampionsNameSuggestions"
+                :key="champion"
+                >{{ champion }}</option
+              >
             </datalist>
             <b-input-group-append>
               <b-button

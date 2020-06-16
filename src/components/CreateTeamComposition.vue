@@ -36,6 +36,7 @@
           <div class="selected-champions-display text-white mx-auto mb-3">
             <div
               v-for="championName in selectedChampions"
+              :key="championName"
               class="selected-champion-thumbnail-image-container selected-champion-thumbnail"
               @click="clearChampionFromSelectedChampions(championName)"
             >

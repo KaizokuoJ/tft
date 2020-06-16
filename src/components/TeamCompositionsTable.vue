@@ -44,7 +44,7 @@
               v-for="(champion, index) in getChampionsSortedByCost(
                 row.item.champions
               )"
-              :key = index
+              :key="index"
               class="d-inline-block"
             >
               <div
@@ -59,7 +59,7 @@
               </div>
               <span class="d-block">{{ champion.name }}</span>
               <div>
-                <div v-for="item in champion.items">
+                <div v-for="item in champion.items" :key="item">
                   <img
                     :src="getItemThumbnailImage(item)"
                     alt=""
@@ -74,8 +74,7 @@
                     variant="primary"
                   >
                     <img
-                      :src="
-                      getItemComponentThumbnailImage(item, 0)"
+                      :src="getItemComponentThumbnailImage(item, 0)"
                       alt=""
                       class="mr-3 "
                     />
@@ -94,7 +93,7 @@
               v-for="(champion, index) in getChampionsSortedByCost(
                 row.item.champions
               )"
-              :key = index
+              :key="index"
               class="d-flex justify-content-center"
             >
               <div class="d-flex flex-column align-items-start mb-2">
@@ -111,7 +110,7 @@
                     />
                   </div>
 
-                  <div v-for="item in champion.items">
+                  <div v-for="item in champion.items" :key="item">
                     <b-popover
                       title=""
                       :target="row.index + item + champion.key + 'lol'"
@@ -180,7 +179,7 @@ export default {
     },
     getChampionThumbnailImage(championKey) {
       const formattedChampionName = this.formatChampionName(championKey);
-      console.log(formattedChampionName)
+      console.log(formattedChampionName);
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
         formattedChampionName
       )}.png`);
