@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Landing from "./views/Landing.vue";
+import LandingLayout from "./views/LandingLayout.vue";
 import CreateTeamComposition from "./components/CreateTeamComposition";
 import TeamCompositionIndex from "./components/TeamCompositionsIndex";
 
@@ -13,7 +13,7 @@ export default new Router({
     {
       path: "/",
       name: "landing",
-      component: Landing
+      component: LandingLayout
     },
     {
       path: "/create-team-composition",
