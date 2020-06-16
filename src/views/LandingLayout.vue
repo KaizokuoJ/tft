@@ -8,7 +8,7 @@
       <TeamCompositionBuilder
         @validChampionHasBeenEntered="hasValidChampionBeenEntered = true"
       ></TeamCompositionBuilder>
-      <FooterLayout :hasValidChampionBeenEntered="hasValidChampionBeenEntered" class="footer"></Footer>
+      <FooterLayout :hasValidChampionBeenEntered="hasValidChampionBeenEntered" class="footer"></FooterLayout>
     </div>
   </div>
 </template>

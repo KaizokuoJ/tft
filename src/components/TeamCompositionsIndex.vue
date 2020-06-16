@@ -17,6 +17,7 @@
           <template slot="synergies" slot-scope="row">
             <div
               v-for="synergy in getSynergiesSorted(row.item.synergies)"
+              :key="synergy.type"
               class="d-inline-block ml-3"
             >
               <img
@@ -39,6 +40,7 @@
             <mq-layout mq="lg+">
               <div
                 v-for="champion in getChampionsSortedByCost(row.item.champions)"
+                :key="champion.key"
                 class="d-inline-block"
               >
                 <div
@@ -58,6 +60,7 @@
             <mq-layout :mq="['sm', 'md']">
               <div
                 v-for="champion in getChampionsSortedByCost(row.item.champions)"
+                :key="champion.key"
                 class="d-flex justify-content-center"
               >
                 <div class="d-flex flex-column align-items-start mb-2">
