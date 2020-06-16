@@ -83,7 +83,12 @@
           </template>
 
           <template slot="deleteComp" slot-scope="row">
-              <button class="btn btn-warning" @click="deleteTeamCompositionFromDatabase(row.item.id)">Delete</button>
+            <button
+              class="btn btn-warning"
+              @click="deleteTeamCompositionFromDatabase(row.item.id)"
+            >
+              Delete
+            </button>
           </template>
         </b-table>
       </b-col>
@@ -93,6 +98,7 @@
 
 <script>
 import db from "../firebaseConfig";
+import championTables from "../mixins/team_composition_tables";
 
 export default {
   data() {
@@ -108,27 +114,9 @@ export default {
     };
   },
 
+  mixins: [championTables],
+
   methods: {
-    getChampionThumbnailContainerClass(champion) {
-      return {
-        "champion-thumbnail-image-container-5-cost": champion.cost === 5,
-        "champion-thumbnail-image-container-4-cost": champion.cost === 4,
-        "champion-thumbnail-image-container-3-cost": champion.cost === 3,
-        "champion-thumbnail-image-container-2-cost": champion.cost === 2,
-        "champion-thumbnail-image-container-1-cost": champion.cost === 1
-      };
-    },
-    getChampionThumbnailImage(championKey) {
-      const formattedChampionName = this.formatChampionName(championKey);
-      return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
-        formattedChampionName
-      )}.png`);
-    },
-    getClassOrOriginThumbnailImage(classOrOriginName) {
-      return require(`@/assets/images/classAndOriginImages/${this.capitalizeFirstLetter(
-        classOrOriginName
-      )}.png`);
-    },
     capitalizeFirstLetter: string => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     },
@@ -138,10 +126,12 @@ export default {
     getChampionsSortedByCost: function(champions) {
       return champions.slice().sort(this.compareChampionCost);
     },
-    deleteTeamCompositionFromDatabase (docId) {
-      db.collection('compositions').doc(docId).delete()
-        .then(() => console.log('success'))
-        .catch(err => console.log(err))
+    deleteTeamCompositionFromDatabase(docId) {
+      db.collection("compositions")
+        .doc(docId)
+        .delete()
+        .then(() => console.log("success"))
+        .catch(err => console.log(err));
     },
     compareChampionCost: function(a, b) {
       if (a.cost < b.cost) {
