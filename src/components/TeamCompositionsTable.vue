@@ -166,7 +166,9 @@ export default {
       selectedItem: ""
     };
   },
+
   mixins: [championTables],
+  
   props: ["teamCompositionsToRender", "selectedChampions"],
 
   methods: {

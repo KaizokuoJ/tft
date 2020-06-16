@@ -1,9 +1,9 @@
-const functions = require("firebase-functions/lib/index");
-const admin = require("firebase-admin/lib/index");
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 const cors = require("cors")({ origin: true });
 const serviceAccount = require("../tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
-const databaseCrud = require("./databaseCrud");
+const databaseCrud = require("./dbCrud");
 
 try {
   admin.initializeApp({
@@ -15,35 +15,35 @@ try {
 }
 
 module.exports = {
+  buildTeamCompositionAndCreateInDatabase: functions.https.onRequest(
+    (req, res) => {
+      cors(req, res, async () => {
+        const teamCompositionChampionNames = req.body.champions;
+        const teamCompositionTierRating = req.body.selectedTier;
+        const teamCompositionChampions = await module.exports.getTeamCompositionChampions(
+          teamCompositionChampionNames
+        );
+        const teamCompositionSynergies = await module.exports.getTeamCompositionSynergies(
+          teamCompositionChampions
+        );
 
-  createTeamComposition: functions.https.onRequest((req, res) => {
-    cors(req, res, async () => {
-      console.log(req.body);
-      const teamCompositionChampionNames = req.body.champions;
-      const teamCompositionTierRating = req.body.selectedTier;
-      const teamCompositionChampions = await module.exports.getTeamCompositionChampions(
-        teamCompositionChampionNames
-      );
-      const teamCompositionSynergies = await module.exports.getTeamCompositionSynergies(
-        teamCompositionChampions
-      );
-
-      databaseCrud
-        .createTeamComposition(
-          teamCompositionChampions,
-          teamCompositionSynergies,
-          teamCompositionChampionNames,
-          teamCompositionTierRating
-        )
-        .then(response => {
-          return res.status(200).send("Team Composition created");
-        })
-        .catch(error => {
-          console.log(error);
-          return res.status(200).send("Error creating team composition");
-        });
-    });
-  }),
+        databaseCrud
+          .createTeamComposition(
+            teamCompositionChampions,
+            teamCompositionSynergies,
+            teamCompositionChampionNames,
+            teamCompositionTierRating
+          )
+          .then(response => {
+            return res.status(200).send("Team Composition created");
+          })
+          .catch(error => {
+            console.log(error);
+            return res.status(200).send("Error creating team composition");
+          });
+      });
+    }
+  ),
 
   getTeamCompositionChampions: teamCompositionChampionNames => {
     return new Promise((resolve, reject) => {
@@ -51,7 +51,7 @@ module.exports = {
         .getAllAvailableChampions()
         .then(availableChampions => {
           return resolve(
-            module.exports.propagateChampionsWithDatabaseChampions(
+            module.exports.propagateChampionsWithRelatedDatabaseChampionData(
               teamCompositionChampionNames,
               availableChampions
             )
@@ -61,7 +61,7 @@ module.exports = {
     });
   },
 
-  propagateChampionsWithDatabaseChampions(
+  propagateChampionsWithRelatedDatabaseChampionData(
     teamCompositionChampionNames,
     availableChampions
   ) {
@@ -72,7 +72,7 @@ module.exports = {
       });
       championsToBeAddedToComposition.push(champion);
     });
-    return [].concat.apply([], championsToBeAddedToComposition)
+    return [].concat.apply([], championsToBeAddedToComposition);
   },
 
   getTeamCompositionSynergies: async teamCompositionChampions => {
@@ -198,7 +198,7 @@ module.exports = {
         }
       } else if (classOrOriginCount.value === "Robot") {
         if (classOrOriginCount.count >= 1) {
-          compositionSynergies.push({ type: "robot",  level: 1 });
+          compositionSynergies.push({ type: "robot", level: 1 });
         }
       } else if (classOrOriginCount.value === "Void") {
         if (classOrOriginCount.count >= 3) {

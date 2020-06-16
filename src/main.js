@@ -10,14 +10,14 @@ import VueMq from 'vue-mq'
 
 Vue.use(BootstrapVue)
 Vue.use(VueMq, {
-  breakpoints: { // default breakpoints - customize this
+  breakpoints: {
     sm: 576,
     md: 768,
     lg: 992,
     xl: 1200,
     xxl: 99999
   },
-  defaultBreakpoint: 'sm' // customize this for SSR
+  defaultBreakpoint: 'sm'
 });
 
 Vue.config.productionTip = false

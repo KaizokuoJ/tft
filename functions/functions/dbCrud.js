@@ -1,4 +1,4 @@
-const admin = require("firebase-admin/lib/index");
+const admin = require("firebase-admin");
 const serviceAccount = require("../tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
 try {
@@ -30,12 +30,17 @@ module.exports = {
               resolve(availableChampions);
             }
           }
-          return null
+          return null;
         })
         .catch(error => reject(error));
     });
   },
-  createTeamComposition: (teamCompositionChampions, teamCompositionSynergies, teamCompositionChampionNames, teamCompositionTierRating) => {
+  createTeamComposition: (
+    teamCompositionChampions,
+    teamCompositionSynergies,
+    teamCompositionChampionNames,
+    teamCompositionTierRating
+  ) => {
     return admin
       .firestore()
       .collection("compositions")
@@ -47,9 +52,13 @@ module.exports = {
         createdAt: admin.firestore.Timestamp.now()
       })
       .then(compositionDocument => {
-        return admin.firestore().collection('compositions').doc(compositionDocument.id).update({
-          id: compositionDocument.id
-        })
+        return admin
+          .firestore()
+          .collection("compositions")
+          .doc(compositionDocument.id)
+          .update({
+            id: compositionDocument.id
+          });
       });
   }
 };

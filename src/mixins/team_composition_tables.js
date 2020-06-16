@@ -9,10 +9,10 @@ export default {
         "champion-thumbnail-image-container-1-cost": champion.cost === 1
       };
     },
-    getChampionThumbnailImage(championKey) {
-      const formattedChampionName = this.formatChampionName(championKey);
+    getChampionThumbnailImage(championKeyOrName) {
+      const formattedForImageUrlChampionName = this.formatChampionName(championKeyOrName);
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
-        formattedChampionName
+        formattedForImageUrlChampionName
       )}.png`);
     },
     getClassOrOriginThumbnailImage(classOrOriginName) {

@@ -31,6 +31,7 @@
                 >{{ champion }}</option
               >
             </datalist>
+
             <b-input-group-append>
               <b-button
                 variant="primary"
@@ -74,6 +75,7 @@
         </div>
       </b-col>
     </b-row>
+
     <TeamCompositionsTable
       :teamCompositionsToRender="getTeamCompositionsToRender"
       :selectedChampions="selectedChampions"
@@ -84,6 +86,7 @@
 </template>
 
 <script>
+import teamCompositionTables from "../mixins/team_composition_tables";
 import db from "../firebaseConfig";
 import TeamCompositionsTable from "./TeamCompositionsTable";
 
@@ -97,6 +100,8 @@ export default {
       didUserProvideIncorrectInput: false
     };
   },
+
+  mixins: [teamCompositionTables],
 
   computed: {
     getTeamCompositionsToRender() {
@@ -150,7 +155,6 @@ export default {
       } else if (championName === "Chogath") {
         return "Cho'gath";
       } else if (championName === "RekSai") {
-        console.log("yo");
         return "Rek'sai";
       } else if (championName === "Khazix") {
         return "Kha'zix";
@@ -179,12 +183,6 @@ export default {
           return selectedChampion !== championName;
         }
       );
-    },
-
-    getChampionThumbnailImage(championName) {
-      return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
-        championName
-      )}.png`);
     },
 
     capitalizeFirstLetter: string => {

@@ -1,8 +1,7 @@
 <template>
   <div>
     <!--    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>-->
-    <!--      Unfortunately, I can't update the meta compositions to account for this weeks' side-patch until Friday. I've been on a holiday.-->
-    <!--        Once I return, I'll be working on improving the website, and on a new item-based feature! :) Also I'll finally add Twisted Fate.-->
+    <!-- Write news/message to users here and uncomment -->
     <!--    </b-alert>-->
     <mq-layout mq="lg+">
       <img
