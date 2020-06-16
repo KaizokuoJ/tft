@@ -120,12 +120,6 @@ export default {
     capitalizeFirstLetter: string => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     },
-    getSynergiesSorted: function(synergies) {
-      return synergies.slice().sort(this.compareSynergyTypes);
-    },
-    getChampionsSortedByCost: function(champions) {
-      return champions.slice().sort(this.compareChampionCost);
-    },
     deleteTeamCompositionFromDatabase(docId) {
       db.collection("compositions")
         .doc(docId)
@@ -141,43 +135,6 @@ export default {
         return 1;
       }
       return 0;
-    },
-    compareSynergyTypes: function(a, b) {
-      if (a.type < b.type) {
-        return -1;
-      }
-      if (a.type > b.type) {
-        return 1;
-      }
-      return 0;
-    },
-
-    convertTierNumberToLetter: function(tierNumber) {
-      if (tierNumber === 1) {
-        return "S";
-      } else if (tierNumber === 2) {
-        return "A";
-      } else if (tierNumber === 3) {
-        return "B";
-      } else if (tierNumber >= 4) {
-        return "C";
-      }
-    },
-
-    formatChampionName(championName) {
-      if (championName === "AurelionSol") {
-        return "Aurelion Sol";
-      } else if (championName === "MissFortune") {
-        return "Miss Fortune";
-      } else if (championName === "Chogath") {
-        return "Cho'gath";
-      } else if (championName === "RekSai") {
-        return "Rek'sai";
-      } else if (championName === "Khazix") {
-        return "Kha'zix";
-      } else {
-        return championName;
-      }
     }
   },
   created() {
@@ -204,7 +161,6 @@ export default {
   border: 3px solid #c4ac76;
   border-radius: 50%;
 }
-
 .class-or-origin-thumbnail-image {
   height: 45px;
 }
@@ -251,17 +207,14 @@ export default {
   height: 40px;
   transition: 0.25s;
   transition-timing-function: ease-in-out;
-
   &:hover {
     transform: scale(1.05);
   }
 }
-
 td::before {
   text-align: center !important;
   width: 100% !important;
 }
-
 td > div {
   padding: 0rem !important;
 }

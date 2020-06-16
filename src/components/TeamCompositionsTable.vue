@@ -16,6 +16,11 @@
             {{ convertTierNumberToLetter(row.item.tier) }}
           </div>
         </template>
+        <template slot="size" slot-scope="row">
+          <span class="font-weight-bold">{{
+            row.item.championNames.length
+          }}</span>
+        </template>
         <template slot="synergies" slot-scope="row">
           <div
             v-for="synergy in getSynergiesSorted(row.item.synergies)"
@@ -31,11 +36,6 @@
               {{ synergy.type }}
             </span>
           </div>
-        </template>
-        <template slot="size" slot-scope="row">
-          <span class="font-weight-bold">{{
-            row.item.championNames.length
-          }}</span>
         </template>
 
         <template slot="champions" slot-scope="row">
@@ -199,58 +199,6 @@ export default {
     },
     capitalizeFirstLetter: string => {
       return string.charAt(0).toUpperCase() + string.slice(1);
-    },
-    getSynergiesSorted: function(synergies) {
-      return synergies.slice().sort(this.compareSynergyTypes);
-    },
-    getChampionsSortedByCost: function(champions) {
-      return champions.slice().sort(this.compareChampionCost);
-    },
-    compareChampionCost: function(a, b) {
-      if (a.cost < b.cost) {
-        return -1;
-      }
-      if (a.cost > b.cost) {
-        return 1;
-      }
-      return 0;
-    },
-    compareSynergyTypes: function(a, b) {
-      if (a.type < b.type) {
-        return -1;
-      }
-      if (a.type > b.type) {
-        return 1;
-      }
-      return 0;
-    },
-
-    convertTierNumberToLetter: function(tierNumber) {
-      if (tierNumber === 1) {
-        return "S";
-      } else if (tierNumber === 2) {
-        return "A";
-      } else if (tierNumber === 3) {
-        return "B";
-      } else if (tierNumber >= 4) {
-        return "C";
-      }
-    },
-
-    formatChampionName(championName) {
-      if (championName === "AurelionSol") {
-        return "Aurelion Sol";
-      } else if (championName === "MissFortune") {
-        return "Miss Fortune";
-      } else if (championName === "Chogath") {
-        return "Cho'gath";
-      } else if (championName === "RekSai") {
-        return "Rek'sai";
-      } else if (championName === "Khazix") {
-        return "Kha'zix";
-      } else {
-        return championName;
-      }
     }
   },
   created() {
@@ -329,15 +277,10 @@ export default {
     transform: scale(1.05);
   }
 }
-
-td {
-}
-
 td::before {
   text-align: center !important;
   width: 100% !important;
 }
-
 td > div {
   padding: 0rem !important;
 }
