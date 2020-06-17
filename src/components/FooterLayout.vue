@@ -2,7 +2,7 @@
   <div
     :class="{
       footer: !hasValidChampionBeenEntered,
-      'footer-post-user-input': hasValidChampionBeenEntered
+      'footer--post-user-input': hasValidChampionBeenEntered
     }"
   >
     <EmailCaptureArea></EmailCaptureArea>
@@ -39,7 +39,7 @@ export default {
   margin-top: 8rem;
   margin-bottom: 1rem;
 }
-.footer-post-user-input {
+.footer--post-user-input {
   margin-top: 2rem;
   margin-bottom: 3rem;
 }

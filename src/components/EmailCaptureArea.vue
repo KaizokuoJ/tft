@@ -1,6 +1,6 @@
 <template>
   <div class="email-capture-area mx-auto border-bottom">
-    <p class="email-capture-text">
+    <p class="email-capture-area__text">
       Get an email ONLY when I release a new feature
     </p>
     <b-form-group>
@@ -55,7 +55,7 @@ export default {
 .email-capture-area {
   width: 280px;
 }
-.email-capture-text {
+.email-capture-area__text {
   color: #a2abb3;
 }
 </style>

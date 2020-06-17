@@ -3,28 +3,22 @@
     <!--    <b-alert v-model="showDismissibleAlert" variant="success" dismissible>-->
     <!-- Write news/message to users here and uncomment -->
     <!--    </b-alert>-->
-    <mq-layout mq="lg+">
-      <img
-        src="../assets/images/riverspriteEyeShadow.png"
-        alt=""
-        class="banner-logo"
-      />
-      <h1 class="title text-white font-weight-bold">TFT Cheat Sheets</h1>
-      <h3 class="text-white">
-        Find team compositions based on your current in-game champions
-      </h3>
-    </mq-layout>
-    <mq-layout :mq="['sm', 'md']">
-      <img
-        src="../assets/images/riverspriteEyeShadow.png"
-        alt=""
-        class="sm-md-banner-logo"
-      />
-      <h1 class="sm-md-title text-white font-weight-bold">TFT Cheat Sheets</h1>
-      <h6 class="text-white">
-        Find team compositions based on your current in-game champions
-      </h6>
-    </mq-layout>
+
+    <img
+      src="../assets/images/riverspriteEyeShadow.png"
+      alt=""
+      class="banner-logo"
+    />
+    <h1 class="title text-white font-weight-bold">TFT Cheat Sheets</h1>
+    <h3
+      class="text-white"
+      :class="{
+        h6: $mq === 'md' || $mq === 'sm',
+        h3: $mq === 'xxl' || $mq === 'xl' || $mq === 'lg'
+      }"
+    >
+      Find team compositions based on your current in-game champions
+    </h3>
   </div>
 </template>
 
@@ -38,17 +32,20 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .title {
   font-size: 52px;
 }
 .banner-logo {
   height: 300px;
 }
-.sm-md-title {
-  font-size: 32px;
-}
-.sm-md-banner-logo {
-  height: 150px;
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+  .banner-logo {
+    height: 150px;
+  }
 }
 </style>
