@@ -168,7 +168,7 @@ export default {
   },
 
   mixins: [championTables],
-  
+
   props: {
     teamCompositionsToRender: {
       type: Array,

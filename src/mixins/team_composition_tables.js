@@ -10,7 +10,9 @@ export default {
       };
     },
     getChampionThumbnailImage(championKeyOrName) {
-      const formattedForImageUrlChampionName = this.formatChampionName(championKeyOrName);
+      const formattedForImageUrlChampionName = this.formatChampionName(
+        championKeyOrName
+      );
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
         formattedForImageUrlChampionName
       )}.png`);
