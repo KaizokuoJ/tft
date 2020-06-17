@@ -20,16 +20,16 @@ module.exports = {
       cors(req, res, async () => {
         const teamCompositionChampionNames = req.body.champions;
         const teamCompositionTierRating = req.body.selectedTier;
-        const teamCompositionChampions = await module.exports.getTeamCompositionChampions(
+        const teamCompositionChampionsData = await module.exports.getTeamCompositionChampions(
           teamCompositionChampionNames
         );
         const teamCompositionSynergies = await module.exports.getTeamCompositionSynergies(
-          teamCompositionChampions
+          teamCompositionChampionsData
         );
 
         databaseCrud
           .createTeamComposition(
-            teamCompositionChampions,
+            teamCompositionChampionsData,
             teamCompositionSynergies,
             teamCompositionChampionNames,
             teamCompositionTierRating
@@ -51,7 +51,7 @@ module.exports = {
         .getAllAvailableChampions()
         .then(availableChampions => {
           return resolve(
-            module.exports.propagateChampionsWithRelatedDatabaseChampionData(
+            module.exports.propagateChampionsWithChampionData(
               teamCompositionChampionNames,
               availableChampions
             )
@@ -61,7 +61,7 @@ module.exports = {
     });
   },
 
-  propagateChampionsWithRelatedDatabaseChampionData(
+  propagateChampionsWithChampionData(
     teamCompositionChampionNames,
     availableChampions
   ) {
