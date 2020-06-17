@@ -1,14 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import VueMq from 'vue-mq'
+import BootstrapVue from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import VueMq from "vue-mq";
 
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue);
 Vue.use(VueMq, {
   breakpoints: {
     sm: 576,
@@ -17,10 +16,10 @@ Vue.use(VueMq, {
     xl: 1200,
     xxl: 99999
   },
-  defaultBreakpoint: 'sm'
+  defaultBreakpoint: "sm"
 });
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 window.Intercom("boot", {
   app_id: "ywbnhge7"
@@ -28,6 +27,5 @@ window.Intercom("boot", {
 
 new Vue({
   router,
-  store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");

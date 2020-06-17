@@ -25,7 +25,12 @@ export default {
   components: {
     EmailCaptureArea
   },
-  props: ["hasValidChampionBeenEntered"]
+  props: {
+    hasValidChampionBeenEntered: {
+      type: Boolean,
+      required: false
+    }
+  }
 };
 </script>
 

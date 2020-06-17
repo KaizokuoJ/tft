@@ -169,7 +169,16 @@ export default {
 
   mixins: [championTables],
   
-  props: ["teamCompositionsToRender", "selectedChampions"],
+  props: {
+    teamCompositionsToRender: {
+      type: Array,
+      required: true
+    },
+    selectedChampions: {
+      type: Array,
+      required: true
+    }
+  },
 
   methods: {
     getItemThumbnailImage(itemName) {
