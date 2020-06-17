@@ -63,13 +63,13 @@
           <div
             v-for="championName in selectedChampions"
             :key="championName"
-            class="selected-champion-thumbnail-image-container selected-champion-thumbnail"
+            class="selected-champion-thumbnail__image-container selected-champion-thumbnail"
             @click="removeChampionFromSelectedChampions(championName)"
           >
             <img
               :src="getChampionThumbnailImage(championName)"
               alt="Image of a champion that was entered in the input field"
-              class="selected-champion-thumbnail-image selected-champion-thumbnail"
+              class="selected-champion-thumbnail__image selected-champion-thumbnail"
             />
           </div>
         </div>
@@ -229,14 +229,14 @@ export default {
     opacity: 0.4;
   }
 }
-.selected-champion-thumbnail-image-container {
+.selected-champion-thumbnail__image-container {
   display: inline-block;
   position: relative;
   width: 71px;
   height: 71px;
   background: white;
 }
-.selected-champion-thumbnail-image {
+.selected-champion-thumbnail__image {
   position: absolute;
   top: 3px;
   left: 3px;

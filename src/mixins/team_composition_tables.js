@@ -2,11 +2,11 @@ export default {
   methods: {
     getChampionThumbnailContainerClass(champion) {
       return {
-        "champion-thumbnail-image-container-5-cost": champion.cost === 5,
-        "champion-thumbnail-image-container-4-cost": champion.cost === 4,
-        "champion-thumbnail-image-container-3-cost": champion.cost === 3,
-        "champion-thumbnail-image-container-2-cost": champion.cost === 2,
-        "champion-thumbnail-image-container-1-cost": champion.cost === 1
+        "champion-thumbnail__image-container--5-cost": champion.cost === 5,
+        "champion-thumbnail__image-container--4-cost": champion.cost === 4,
+        "champion-thumbnail__image-container--3-cost": champion.cost === 3,
+        "champion-thumbnail__image-container--2-cost": champion.cost === 2,
+        "champion-thumbnail__image-container--1-cost": champion.cost === 1
       };
     },
     getChampionThumbnailImage(championKeyOrName) {
