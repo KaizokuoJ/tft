@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+/functions/tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json
 
 # local env files
 .env.local

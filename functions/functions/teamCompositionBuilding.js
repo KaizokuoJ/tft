@@ -3,7 +3,7 @@ const admin = require("firebase-admin");
 const cors = require("cors")({ origin: true });
 const serviceAccount = require("../tft-cheatsheets-firebase-adminsdk-bcsn9-b3f19c1de2.json");
 
-const databaseCrud = require("./dbCrud");
+const services = require("./services");
 
 try {
   admin.initializeApp({
@@ -27,7 +27,7 @@ module.exports = {
           teamCompositionChampionsData
         );
 
-        databaseCrud
+        services
           .createTeamComposition(
             teamCompositionChampionsData,
             teamCompositionSynergies,
@@ -47,7 +47,7 @@ module.exports = {
 
   getTeamCompositionChampions: teamCompositionChampionNames => {
     return new Promise((resolve, reject) => {
-      databaseCrud
+      services
         .getAllAvailableChampions()
         .then(availableChampions => {
           return resolve(
