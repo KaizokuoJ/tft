@@ -207,9 +207,6 @@ export default {
       } else {
         return "Sorry, currently there are no meta compositions that include your given champions";
       }
-    },
-    capitalizeFirstLetter: string => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
     }
   },
   created() {

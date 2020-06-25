@@ -117,9 +117,6 @@ export default {
   mixins: [championTables],
 
   methods: {
-    capitalizeFirstLetter: string => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    },
     deleteTeamCompositionFromDatabase(docId) {
       db.collection("compositions")
         .doc(docId)

@@ -89,6 +89,7 @@
 import teamCompositionTables from "../mixins/team_composition_tables";
 import db from "../firebaseConfig";
 import TeamCompositionsTable from "./TeamCompositionsTable";
+import * as utilities from "../helpers/utilities";
 
 export default {
   data() {
@@ -119,6 +120,8 @@ export default {
   },
 
   methods: {
+    capitalizeFirstLetter: utilities.capitalizeFirstLetter,
+
     shouldTeamCompositionBeRendered(teamComposition) {
       let teamCompositionShouldBeRendered = false;
       const championNames = teamComposition.championNames.map(championName => {
@@ -183,10 +186,6 @@ export default {
           return selectedChampion !== championName;
         }
       );
-    },
-
-    capitalizeFirstLetter: string => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
     }
   },
 

@@ -59,6 +59,7 @@
 
 <script>
 import axios from "axios";
+import * as utilities from "../helpers/utilities";
 
 export default {
   data() {
@@ -78,6 +79,8 @@ export default {
   },
 
   methods: {
+    capitalizeFirstLetter: utilities.capitalizeFirstLetter,
+    
     createTeamComposition() {
       let data = {};
       data.champions = this.selectedChampions;
@@ -118,10 +121,6 @@ export default {
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
         championName
       )}.png`);
-    },
-
-    capitalizeFirstLetter: string => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
     }
   }
 };
