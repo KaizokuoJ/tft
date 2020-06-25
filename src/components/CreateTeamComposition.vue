@@ -91,7 +91,6 @@ export default {
         .then(() => {
           this.selectedChampions = [];
           this.selectedChampionItems = {};
-          console.log("success");
         })
         .catch(() => console.log("error"));
     },

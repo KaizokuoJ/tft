@@ -184,9 +184,7 @@ export default {
     getItemThumbnailImage(itemName) {
       return require(`@/assets/images/items/${itemName}.png`);
     },
-    onMobileItemThumbnailImageClick: function(refName) {
-      console.log(refName);
-      console.log(this.$refs.refName);
+    onMobileItemThumbnailImageClick: function() {
       this.$refs.refName.$emit("close");
     },
     getItemComponentThumbnailImage(item, componentNumber) {
