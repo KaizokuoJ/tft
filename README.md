@@ -7,7 +7,7 @@ they could build and which items are recommended for those champions.
 
 Build with Vue and Firebase/Firestore NoSQL serverless cloud functions
 
-
+Cloud functions can be found in functions folder
 
 
 

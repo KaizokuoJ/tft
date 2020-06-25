@@ -79,8 +79,6 @@ export default {
   },
 
   methods: {
-    capitalizeFirstLetter: utilities.capitalizeFirstLetter,
-    
     createTeamComposition() {
       let data = {};
       data.champions = this.selectedChampions;
@@ -121,7 +119,8 @@ export default {
       return require(`@/assets/images/championImages/${this.capitalizeFirstLetter(
         championName
       )}.png`);
-    }
+    },
+    capitalizeFirstLetter: utilities.capitalizeFirstLetter
   }
 };
 </script>

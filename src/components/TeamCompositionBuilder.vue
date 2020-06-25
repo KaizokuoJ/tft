@@ -120,8 +120,6 @@ export default {
   },
 
   methods: {
-    capitalizeFirstLetter: utilities.capitalizeFirstLetter,
-
     shouldTeamCompositionBeRendered(teamComposition) {
       let teamCompositionShouldBeRendered = false;
       const championNames = teamComposition.championNames.map(championName => {
@@ -186,7 +184,8 @@ export default {
           return selectedChampion !== championName;
         }
       );
-    }
+    },
+    capitalizeFirstLetter: utilities.capitalizeFirstLetter
   },
 
   created() {

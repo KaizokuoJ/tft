@@ -2,7 +2,6 @@ import utilities from "../helpers/utilities";
 
 export default {
   methods: {
-    capitalizeFirstLetter: utilities.capitalizeFirstLetter,
     getChampionThumbnailContainerClass(champion) {
       return {
         "champion-thumbnail__image-container--5-cost": champion.cost === 5,
@@ -74,6 +73,7 @@ export default {
       } else {
         return championName;
       }
-    }
+    },
+    capitalizeFirstLetter: utilities.capitalizeFirstLetter
   }
 };
