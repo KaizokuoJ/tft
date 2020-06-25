@@ -7,6 +7,12 @@ they could build and which items are recommended for those champions.
 
 Build with Vue and Firebase/Firestore NoSQL serverless cloud functions
 
+
+
+
+
+
+
 ## Project setup
 ```
 npm install
@@ -21,16 +27,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
